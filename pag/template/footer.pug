@@ -1,0 +1,22 @@
+// begin footer
+footer.footer
+
+	.container_center
+	
+		.footer__left
+			.footer__inn ИНН 12412412412   ОГРН 2144124124122
+			a.footer__privacy(href="#" data-toggle="modal" data-target="#privacyModal") Политика конфендиальности
+		
+		.footer__right
+			a.footer__time(href="http://timetofirst.ru" target="blank")
+				span.footer__timeLabel Разработка сайта  —
+				span.footer__timeImg
+					-if (pathToHome == true) {
+						img(src="img/time-logo.png")
+						img(src="img/time-logo-hover.png")
+					-} else {
+						img(src="../img/time-logo.png")
+						img(src="../img/time-logo-hover.png")
+					-}
+
+// end footer

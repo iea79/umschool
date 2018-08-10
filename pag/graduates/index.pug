@@ -1,0 +1,223 @@
+extends ../template/template.pug
+block variables
+	-var pathToHome = false;
+
+block content
+	// begin header
+	header.header.header_nav
+		.container_center
+
+			a.header__logo(href="../")
+				img(src="../img/logo.png" alt="")
+
+			nav.nav
+				<a href="../parents/" class="nav__link"><i class="icon-angle-left"></i> Перейти на страницу для родителей</a>
+				<a href="#" class="nav__link">Личный кабинет</a>
+					
+	// end header
+	
+	// begin main__content 
+	main.main__content
+		// begin firstScreen 
+		section.firstScreen.firstScreen_in
+			
+			.container_center
+				.firstScreen__content
+					h1.firstScreen__title 
+						b Готовим выпускников 
+							br 
+							|к ЕГЭ 
+						|по 11 предметам 
+						br 
+						|в режиме 
+						b онлайн
+						i.icon-online
+
+					.firstScreen__subtitle
+						p 
+							b Объясняем 
+							|до тех пор, пока не станет понятно!
+
+					.firstScreen__action
+						buttons.btn.btn_success.btn_icon
+							i.icon-click 
+							|Узнать о программах обучения
+						buttons.btn.btn_warning.btn_icon
+							i.icon-pencil 
+							|Записаться на бесплатное занятие
+
+					.firstScreen__grid
+						.firstScreen__gridItem
+							.firstScreen__gridImg 
+								img(src="../img/info1.png", alt="")
+							.firstScreen__gridText Средний балл наших учеников
+						.firstScreen__gridItem
+							.firstScreen__gridImg 
+								img(src="../img/info2.png", alt="")
+							.firstScreen__gridText Все обучение проходит online
+
+				.firstScreen__bage 
+					b В 2018 году 
+					|наши ученики набрали в среднем 
+					br
+					b на 27,5 баллов больше, 
+					|чем усредненный <br>балл по России
+
+				img.firstScreen__prev(src="../img/graduates-full.png", alt="")
+
+			img(src="../img/Flask.png" alt="" class="decor decor_flask")
+			img(src="../img/Book2.png" alt="" class="decor decor_book2")
+		// end firstScreen 
+
+		// begin why 
+		section.why#why
+			.container_center
+				
+				.why__top
+					img.why__img(src="../img/video-top.png", alt="")
+					h2.section__title 
+						b Узнайте, почему 
+						|11 863 выпускников считают подготовку в УМСКУЛ наиболее эффективной
+				.trapeze
+					.video__wrapper.js_youtube#Y2uDpiHRz2Q
+						img.video__prev(src="../img/prev1.png", alt="")
+		// end why 
+		
+		// begin time 
+		section.time#time
+			.container_center
+				
+				.time__top
+					h2.section__title 
+						span.section__titleLeft Ученики в УМСКУЛ 
+							b тратят в
+						span.section__titleRight 
+							b раза больше 
+							br
+							|времени 
+							span.section__titleBage на подготовку к ЕГЭ 
+							br
+							b чем их сверстники 
+						span.section__titleCenter 
+							span.section__titleNum 3,4
+						img.decor.decor_time(src="../img/Time.png", alt="")
+					.time__topRow
+						.time__topLeft
+							p Мы выяснили, сколько времени реально готовятся выпускники к ЕГЭ. Оказалось, что наши ученики занимаются в среднем в 4,3 раза больше, чем ребята, которые готовятся к ЕГЭ самостоятельно и в 2,2 раза больше, чем те, кто готовится с репетитором.
+							p Это и обеспечивает хорошие результаты на ЕГЭ.
+
+						.time__topRight
+							.time__topList
+								.time__topItem
+									img(src="../img/student.png", alt="")
+									.time__topText 
+										span <b>Самостоятельная</b> подготовка
+								.time__topItem.time__topItem_left
+									img(src="../img/teach.png", alt="")
+									.time__topText 
+										span Подготовка <b>с репетитором</b>
+								.time__topItem
+									img(src="../img/bear.png", alt="")
+									.time__topText 
+										span Подготовка <b>в УМСКУЛ</b>
+
+
+				.time__bottom
+					.trapeze
+						.labeled
+							.time__bottomLeft
+								.section__title Как правильно 
+									b выстроить процесс 
+									|подготовки к ЕГЭ?
+								.time__bage Бесплатный курс
+								ol.listNumber
+									li.listNumber__item с чего начать подготовку к ЕГЭ по каждому предмету?
+									li.listNumber__item как оценить свой уровень знаний и составить программу на весь год?
+									li.listNumber__item где искать полезные и как не наткнуться на бесполезные пособия?
+									li.listNumber__item где найти задачи, приближенные к тем, что будут на ЕГЭ?
+									li.listNumber__item как учесть то, чего не учитывают 90% учеников? 
+							.time__bottomRight
+								img.time__bottomCollage(src="../img/video-group.png", alt="")
+								button.btn.btn_success Бесплатно получить доступ к курсу
+		// end time 
+
+		// begin economy 
+		section.economy#economy
+			.container_center
+				h2.section__title.section__title_center <b>Экономьте время на дорогу:</b>  все занятия <br>проходят онлайн в формате вебинаров
+				.economy__wrap
+					.economy__video
+						.video__wrapper.js_youtube#Y2uDpiHRz2Q
+							img.video__prev(src="../img/prev2.png", alt="")
+							.economy__info 
+								span Посмотрите пример одного 
+								br
+								span из занятий по истории
+					.economy__bage 
+						span.economy__bageText
+							b Если вы не успели 
+							|посмотреть вебинар, он будет доступен в записи
+					img.decor.decor_head(src="../img/Head.png", alt="")
+		// end economy 
+		
+		// begin takeFree 
+		section.takeFree#takeFree
+			.container_center
+				h2.section__title.section__title_center Получите по одному занятию <br>на каждый предмет бесплатно!
+				.section__sub Для этого просто нажмите на кнопку ниже и авторизуйся через <br>ВК. Занятия придут в личные сообщения.
+				.takeFree__action
+					button.btn.btn_success Получите бесплатные занятия
+				img.decor.decor_circule(src="../img/circule.png", alt="")
+		// end takeFree 
+		
+		// begin dz 
+		section.dz#dz
+			.labeled
+				.container_center
+					.dz__left
+						.dz__item.active#dz1
+							img(src="../img/zadanie.png", alt="")
+						.dz__item#dz2
+							img(src="../img/zadanie.png", alt="")
+						.dz__item#dz3
+							img(src="../img/zadanie.png", alt="")
+					.dz__right
+						h2.section__title Ни одно занятие 
+							b не проходит 
+							br
+							b без домашних заданий, 
+							br
+							|которые проверяют наши 
+							br
+							|кураторы
+						p За неделю ученики выполняют 3 домашних задания по каждому предмету. На каждое уходит 1,5 часа.
+						p Это не просто, но ребята начинают обгонять сверстников уже через 2 недели обучения.
+
+						ul.dz__togle
+							li.dz__togleItem.active
+								a.dz__togleLink.active(href="#dz1" data-toggle="tab") Русский язык
+							li.dz__togleItem
+								a.dz__togleLink(href="#dz2" data-toggle="tab") Обществознание
+							li.dz__togleItem
+								a.dz__togleLink(href="#dz3" data-toggle="tab") Физика
+
+			img.decor.decor_aya(src="../img/АЯ.png", alt="")
+			img.decor.decor_pen(src="../img/Pen.png", alt="")
+				
+		// end dz 
+
+		// begin chats 
+		section.chats
+			.container_center
+				.chats__left
+					h2.section__title <b>Общие чаты <br>учеников</b> и поддержка кураторов 24/7
+					.section__sub Здесь вы можете увидеть пример переписки, в которой у ученика возникает вопрос по д/з, а другие ребята и куратор помогают ему разобраться
+				.chats__right
+					.chats__slider
+						.chats__sliderItem
+							img(src="../img/iPhone-slide.png", alt="")
+						.chats__sliderItem
+							img(src="../img/iPhone-slide.png", alt="")
+		// end chats 
+
+	// end main__content 

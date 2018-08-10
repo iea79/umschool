@@ -1,0 +1,23 @@
+extends ../template/template.pug
+block variables
+	-var pathToHome = false;
+
+block content
+	// begin header
+	header.header.header_nav
+		.container_center
+
+			a.header__logo(href="../")
+				img(src="../img/logo.png" alt="")
+
+			nav.nav
+				<a href="../graduates/" class="nav__link"><i class="icon-angle-left"></i> Перейти на страницу для выпускников</a>
+				<a href="#" class="nav__link">Личный кабинет</a>
+					
+	// end header
+	
+	// begin main__content 
+	main.main__content
+		.container_center
+			
+	// end main__content 

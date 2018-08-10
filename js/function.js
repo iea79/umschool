@@ -82,7 +82,10 @@ $(document).ready(function() {
     // Inputmask.js
     // $('[name=tel]').inputmask("+9(999)999 99 99",{ showMaskOnHover: false });
 
-   	gridMatch();
+    $('.chats__slider').slick();
+
+   	// gridMatch();
+    fontResize();
 });
 
 $(window).resize(function(event) {
@@ -95,14 +98,15 @@ $(window).resize(function(event) {
 });
 
 function checkOnResize() {
-   	gridMatch();
+   	// gridMatch();
+    fontResize();
 }
 
-function gridMatch() {
-   	$('[data-grid-match] .grid__item').matchHeight({
-   		byRow: true,
-   	});
-}
+// function gridMatch() {
+//    	$('[data-grid-match] .grid__item').matchHeight({
+//    		byRow: true,
+//    	});
+// }
 
 function fontResize() {
     var windowWidth = $(window).width();
@@ -124,7 +128,7 @@ $(function () {
             $(this).css('background-image', 'url(http://i.ytimg.com/vi/' + this.id + '/sddefault.jpg)');
 
             // Добавляем иконку Play поверх миниатюры, чтобы было похоже на видеоплеер
-            $(this).append($('<img src="img/play.svg" alt="Play" class="video__play">'));
+            $(this).append($('<i class="video__play icon-play"></i>'));
 
         });
 
@@ -138,8 +142,6 @@ $(function () {
             var iframe = $('<iframe/>', {
                 'frameborder': '0',
                 'src': iframe_url,
-                'width': $(this).width(),
-                'height': $(this).innerHeight()
             })
 
             // Заменяем миниатюру HTML5 плеером с YouTube

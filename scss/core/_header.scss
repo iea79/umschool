@@ -1,12 +1,17 @@
 /* Header
  ----------------------------------------------------------------------------- */
 .header {
-	background-color: #ccc;
-	padding: 10px 0;
+	// background-color: #ccc;
+	padding: 3.7em 0 1em;
+	text-align: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
 	@extend %clear_a;
 	&__logo {
-		float: left;
-		width: 150px;
+		display: inline-block;
+		width: 16.8em;
 	}
 }
 

@@ -1,0 +1,58 @@
+extends template/template.pug
+
+block content
+	// begin header
+	header.header
+		.container_center
+
+			a.header__logo(href="/")
+				img(src="img/logo.png" alt="")
+					
+	// end header
+	
+	// begin main__content
+	main.main__content
+
+		.firstScreen
+			
+			.container_center
+				
+				.firstScreen__title <b>Школа подготовки к ЕГЭ</b> по всем <br>предметам в режиме <b>онлайн</b>
+
+				.firstScreen__sub
+					p Мы понимаем, что при подготовке к ЕГЭ для родителей <br>важно одно, а для выпускников — другое.
+					p Мы сделали отдельные страницы сайта. <br><b>Выберите свою</b>
+
+				.firstScreen__info Кликните, чтобы перейти <br>на соответствующую страницу <br>
+					i.icon-click
+
+				.firstScreen__item
+					img(src="img/graduates.png" alt="" class="firstScreen__itemImg")
+					a(href="graduates/" class="firstScreen__itemLink")
+						.firstScreen__itemName
+							span Для выпускников
+						.firstScreen__itemText
+							span которые хотят быстро и без стресса 
+							br
+							span подготовиться к экзаменам
+
+				.firstScreen__item.firstScreen__item_parents
+					img(src="img/parents.png" alt="" class="firstScreen__itemImg")
+					a(href="parents/" class="firstScreen__itemLink")
+						.firstScreen__itemName
+							span Для родителей
+						.firstScreen__itemText
+							span 11-ти классников, которые ищут лучший 
+							br
+							span вариант для подготовки своих детей 
+							br
+							span к экзаменам
+
+	// end main__content
+
+	img(src="img/Аа.png" alt="" class="decor decor_a")
+	img(src="img/Earth.png" alt="" class="decor decor_earth")
+	img(src="img/book.png" alt="" class="decor decor_book")
+	img(src="img/Flag.png" alt="" class="decor decor_flag")
+	img(src="img/Calculator.png" alt="" class="decor decor_calc")
+

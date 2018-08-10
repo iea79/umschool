@@ -1,0 +1,13 @@
+head
+	meta(charset="UTF-8")
+	block title
+		title УМСКУЛ - онлайн школа подготовки к ЕГЭ
+	meta(name="keywords" content="")
+	meta(name="description" content="")
+	meta(name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no")
+	
+	-if (pathToHome == true) {
+		link(href="css/style.css" rel="stylesheet")
+	-} else {
+		link(href="../css/style.css" rel="stylesheet")
+	-}

@@ -6,7 +6,8 @@
 	&__wrapper {
 		position: relative;
 		overflow: hidden;
-		padding-bottom: 56.6em;
+		padding-bottom: 56.4%;
+		border-radius: 1em;
 		iframe {
 			position: absolute;
 			top: 0;
@@ -27,11 +28,34 @@
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		width: 7.2em;
-		height: 7.2em;
-		margin-top: -3.6em;
-		margin-left: -3.6em;
+		width: 12em;
+		height: 12em;
+		line-height: 11.7em;
+		text-align: center;
+		margin-top: -6em;
+		margin-left: -6em;
 		border-radius: 50%;
+		border: 0.313em solid $color_withe;
+		color: $color_withe;
+		cursor: pointer;
+		transition: all .3s;
+		&:before {
+			font-size: 4.4em;
+			margin-right: -0.2em;
+			transition: all .3s;
+			display: inline-block;
+		}
+		&:hover {
+			transform: scale(1.05);
+			background-color: $color_warning;
+			border-color: $color_warning;
+			&:before {
+				transform: scale(1.05);
+			}
+		}
+		&:active {
+			transform: scale(1);
+		}
 		// background-color: #f00;
 	}
 }

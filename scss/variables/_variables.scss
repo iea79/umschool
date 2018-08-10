@@ -1,25 +1,21 @@
 /* Global variables */
 /* ======================================================================== */
-$main_font_family:								"Open Sans";
-$main_color:									#000;
+$main_font_family:								"Museo Sans";
+$main_color:									#35190c;
 $main_line_height:								1.2;
-$main_font_size:								16px;
+$main_font_size:								1em;
 
-$container_width:								900px;
+$container_width:								1170px;
 
-$footer_height: 								auto;
+$footer_height: 								10em;
 
 // Color collection for elements
-$color_primary:									#7b8287;
-$color_success:									#36a566;
-$color_info:									#03a9f4;
-$color_warning:									#fca33e;
-$color_danger:									#ff1a1a;
+$color_primary:									#27d0c6;
+$color_success:									#27d0c6;
+$color_info:									#56a5fc;
+$color_warning:									#fda34a;
+$color_danger:									#8fa934;
 $color_withe:									#ffffff;
-
-$green:											$color_success;
-$yellow:										$color_warning;
-$withe:											$color_withe;
 
 $el-colors: (
 	primary: $color_primary, // color for .element__primary
@@ -70,10 +66,10 @@ $input_error_border_color:						red;
 $input_error_placeholder_color:					red;
 
 // Button variables
-$btn_default_bg_color:				 			#ddd;
-$btn_default_text_color:                        $main_color;
+$btn_default_bg_color:				 			#fff;
+$btn_default_text_color:                        $color_info;
 $btn_contrast_text_color:                       $color_withe;
-$btn_default_bg_color_hover:					#ccc;
+$btn_default_bg_color_hover:					#499ee2;
 
 
 

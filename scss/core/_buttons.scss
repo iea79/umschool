@@ -1,10 +1,12 @@
 // Style for button and pseudo button for input and link
 .btn {
 	color: $btn_default_text_color;
-	font-family: $main_font_family;
-	font-size: 16px;
-	font-weight: 300;
-	padding: 5px 15px 7px;
+	font-family: Pusia;
+	font-size: 1.06em;
+	font-weight: 400;
+	letter-spacing: 0.054em;
+	padding: 1.7em 2em 1.9em;
+	letter-spacing: .03em;
 	border: none;
 	outline: none;
 	text-decoration: none;
@@ -13,31 +15,90 @@
 	text-align: center;
 	max-width: 100%;
 	cursor: pointer;
-	border-radius: 5px;
+	border-radius: 3em;
 	transition: all 0.3s;
 	text-decoration: none;
+	text-transform: uppercase;
+	position: relative;
 	&:hover {
-		background-color: #fff;
-		color: #000;
+		background-color: $btn_default_text_color;
+		color: $color_withe;
 		text-decoration: none;
+		box-shadow: 0 0.375em 1.875em #59c6ff;
+		background-position: 0 -4em;
 	}
-	&:focus,&:active {
-		background-color: transparentize(#fff, .2);
-		color: #000;
+	&:active {
+		background-color: $btn_default_text_color;
+		color: $color_withe;
+		transform: translateY(.3em);
 	}
-	@each $status_el, $color_bg in $el_colors {
-		&_#{$status_el} {
-			background-color: $color_bg;
-			border-color: $color_bg;
-			color: $btn_contrast_text_color;
-			&:hover {
-				background-color: darken($color_bg, 7%);
-				color: $btn_contrast_text_color;
-			}
-			&:focus,&:active {
-				background-color: darken($color_bg, 10%);
-				color: $btn_contrast_text_color;
-			}
+	&_icon {
+		padding-left: 3.8em;
+		i {
+			position: absolute;
+			font-size: 1.7em;
+			left: 0.8em;
+			top: 50%;
+			margin-top: -0.6em;
+			opacity: 0.25;
 		}
-	}	
+	}
+	&_primary {
+		background-color: $color_success;
+		color: $color_withe;
+		box-shadow: inset 0 -0.312em 0.625em rgba(131, 180, 235, 0.4), inset 0 -0.062em 0.313em rgba(131, 180, 235, 0.5), inset 0 0.125em 0.625em rgba(131, 180, 235, 0.5);
+		background-color: $color_success;
+		background-image: linear-gradient(to top, #4e75a0 0%, #83b4eb 100%);
+		&:hover {
+			color: $color_withe;
+			box-shadow: inset 0 -0.312em 0.625em rgba(131, 180, 235, 0.4), inset 0 -0.062em 0.313em rgba(131, 180, 235, 0.5), inset 0 0.125em 0.625em rgba(131, 180, 235, 0.5);
+			background-color: $color_success;
+		}
+		&:active {
+		}
+	}
+	&_success {
+		background-color: $color_success;
+		color: $color_withe;
+		text-shadow: 0 0.063em 0 rgba(27, 122, 119, 0.15);
+		background-image: linear-gradient(to top, #f68d38 40%, #fec371 100%);
+		background-size: 100% 200%;
+		box-shadow: 0 2.188em 4.375em rgba(247, 152, 67, 0.35), inset 0 -0.312em 0.625em rgba(251, 188, 100, 0.4), inset 0 -0.062em 0.313em rgba(251, 188, 100, 0.5), inset 0 0.125em 0.625em rgba(251, 188, 100, 0.5);
+		&:hover {
+			color: $color_withe;
+			// background-image: linear-gradient(to top, #f68d38 30%, #fec371 100%);
+			box-shadow: 0 2.188em 4.375em rgba(247, 152, 67, 0.35), inset 0 -0.312em 0.625em rgba(251, 188, 100, 0.4), inset 0 -0.062em 0.313em rgba(251, 188, 100, 0.5), inset 0 0.125em 0.625em rgba(251, 188, 100, 0.5);
+		}
+	}
+	&_warning {
+		color: $color_warning;
+		&:hover {
+			color: $color_withe;
+			box-shadow: 0 0.375em 1.875em #fcc982;
+			background-color: #fd9b3a;
+		}
+	}
+	&_danger {
+		color: $color_danger;
+		&:hover {
+			box-shadow: 0 0.375em 1.875em #b0cd33;
+			background-color: #90ac28;
+			color: $color_withe;
+		}
+	}
+	// @each $status_el, $color_bg in $el_colors {
+	// 	&_#{$status_el} {
+	// 		background-color: $color_bg;
+	// 		border-color: $color_bg;
+	// 		color: $btn_contrast_text_color;
+	// 		&:hover {
+	// 			background-color: darken($color_bg, 7%);
+	// 			color: $btn_contrast_text_color;
+	// 		}
+	// 		&:focus,&:active {
+	// 			background-color: darken($color_bg, 10%);
+	// 			color: $btn_contrast_text_color;
+	// 		}
+	// 	}
+	// }	
 }
