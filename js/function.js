@@ -24,240 +24,199 @@ function isTouch() { return TempApp.touchDevice(); } // for touch device
 
 $(document).ready(function() {
 
-    // Хак для клика по ссылке на iOS
     if (isIOS()) {
         $(function(){$(document).on('touchend', 'a', $.noop)});
     }
 
 	if ('flex' in document.documentElement.style) {
-		// Хак для UCBrowser
 		if (navigator.userAgent.search(/UCBrowser/) > -1) {
 			document.documentElement.setAttribute('data-browser', 'not-flex');
 		} else {		
-		    // Flexbox-совместимый браузер.
 			document.documentElement.setAttribute('data-browser', 'flexible');
 		}
 	} else {
-	    // Браузер без поддержки Flexbox, в том числе IE 9/10.
 		document.documentElement.setAttribute('data-browser', 'not-flex');
 	}
 
-	// First screen full height
-	function setHeiHeight() {
-	    $('.full__height').css({
-	        minHeight: $(window).height() + 'px'
-	    });
-	}
-	setHeiHeight(); // устанавливаем высоту окна при первой загрузке страницы
-	$(window).resize( setHeiHeight ); // обновляем при изменении размеров окна
+    $('[data-scrollTo]').click( function(){ 
+        var scroll_el = $(this).attr('href'); 
+        if ($(scroll_el).length != 0) {
+            $('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500);
+        }
+        return false;
+    });
 
+    $('.chats__slider').slick({
+        fade: true
+    });
+    $('.control__slider').slick({
+        fade: true
+    });
+    $('.control__revSlide').slick({
+        adaptiveHeight: true,
+    });
 
-	// Reset link whte attribute href="#"
-	$('[href*="#"]').click(function(event) {
-		event.preventDefault();
-	});
+    $('.teachers__slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        draggable: false,
+        infinite: false,
+        adaptiveHeight: true,
+        asNavFor: '.teachers__tumbs',
+    });
 
-	// Scroll to ID // Плавный скролл к элементу при нажатии на ссылку. В ссылке указываем ID элемента
-	// $('#main__menu a[href^="#"]').click( function(){ 
-	// 	var scroll_el = $(this).attr('href'); 
-	// 	if ($(scroll_el).length != 0) {
-	// 	$('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500);
-	// 	}
-	// 	return false;
-	// });
+    $('.teachers__tumbs').slick({
+        slidesToShow: 5,
+        infinite: false,
+        asNavFor: '.teachers__slider',
+        vertical: true,
+        focusOnSelect: true,
+        nextArrow: '<span class="teachers__next">ещё <i class="icon-next"></i></span>',
+        prevArrow: '<span class="teachers__prev"><i class="icon-prev"></i></span>',
+        responsive: [
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 1,
+                    arrows: true,
+                    vertical: false,
+                    nextArrow: '<span class="teachers__next"><i class="icon-next"></i></span>',
+                    prevArrow: '<span class="teachers__prev"><i class="icon-prev"></i></span>',
+                }
+            }
+        ]
+    });
 
-	// Stiky menu // Липкое меню. При прокрутке к элементу #header добавляется класс .stiky который и стилизуем
-    // $(document).ready(function(){
-    //     var HeaderTop = $('#header').offset().top;
-        
-    //     $(window).scroll(function(){
-    //             if( $(window).scrollTop() > HeaderTop ) {
-    //                     $('#header').addClass('stiky');
-    //             } else {
-    //                     $('#header').removeClass('stiky');
-    //             }
-    //     });
-    // });
+    $('.thems__link').on('mouseenter', function() {
+        $('.thems__drop').toggleClass('show');
+    });
 
-    // Inputmask.js
-    // $('[name=tel]').inputmask("+9(999)999 99 99",{ showMaskOnHover: false });
+    $('.thems__link').on('mouseleave', function() {
+        $('.thems__drop').removeClass('show');
+    });
 
-    $('.chats__slider').slick();
+    $('.thems__close').on('click', function() {
+        $('.thems__drop').removeClass('show');
+    });
 
-   	// gridMatch();
-    fontResize();
+    $('.control__swichItem').on('click', function() {
+        var wrapId = $(this).data('slider');
+        if (wrapId == '#revGraduates') {
+            var slider = $('#slideGraduates');
+        }
+        if (wrapId == '#revParent') {
+            var slider = $('#slideParent');
+        }
+        $('.control__swichItem').removeClass('active');
+        $(this).addClass('active');
+
+        $('.control__wrap').removeClass('active');
+        $(wrapId).addClass('active');
+        slider.slick('setPosition', 0);
+        slider.find('.slick-slide').height('auto');
+        slider.find('.slick-list').height('auto');
+        slider.slick('setOption', null, null, true);
+    });
+
+    if (isXsWidth()) {
+        $('.control__revText').on('click', function() {
+            var slider = $('.control__revSlide');
+            if ($(this).hasClass('open')) {
+                $('html, body').animate({ scrollTop: $(this).offset().top - $('.control__revPhoto').innerHeight() - 20 }, 0);
+            }
+            $(this).toggleClass('open');
+            slider.find('.slick-slide').height('auto');
+            slider.find('.slick-list').height('auto');
+            slider.slick('setOption', null, null, true);
+        });
+    }
+
+    checkOnResize();
+    dzToggl();
+    VK.Widgets.Group("vk_groups", {mode: 3, no_cover: 1, width: "auto"}, 124303372);
+
 });
 
 $(window).resize(function(event) {
     var windowWidth = $(window).width();
-    // Запрещаем выполнение скриптов при смене только высоты вьюпорта (фикс для скролла в IOS и Android >=v.5)
     if (TempApp.resized == windowWidth) { return; }
     TempApp.resized = windowWidth;
 
-	checkOnResize()
+	checkOnResize();
 });
 
 function checkOnResize() {
-   	// gridMatch();
     fontResize();
+
+    if (isXsWidth()) {
+        $('.dz__left').insertBefore('.dz__togle');
+    } else {
+        $('.dz__left').insertBefore('.dz__right');
+    }
 }
 
-// function gridMatch() {
-//    	$('[data-grid-match] .grid__item').matchHeight({
-//    		byRow: true,
-//    	});
-// }
+function dzToggl() {
+    var item = $('.dz__togleItem');
+    var count = item.length;
+    var current = 1;
+    item.each(function(index, el) {
+        $(this).attr('data-toggler-index', $(this).index());
+    });
+    $('.dz__arrow').on('click', function() {
+        
+        if ($(this).hasClass('dz__prev')) {
+            if (current > 1) {
+                current--;
+            }
+        }
+
+        if ($(this).hasClass('dz__next')) {
+            if (current < count) {
+                current++;
+            }
+        }
+
+        $('[data-toggler-index='+current+'] a').trigger('click');
+
+    });
+}
 
 function fontResize() {
     var windowWidth = $(window).width();
-    if (windowWidth < 1440 && windowWidth >= 768) {
+    if (windowWidth >= 768) {
     	var fontSize = windowWidth/19.05;
     } else if (windowWidth < 768) {
-    	var fontSize = 50;
-    // } else if (windowWidth >= 1770) {
-    // 	var fontSize = 100;
+    	var fontSize = windowWidth/5;
     }
 	$('body').css('fontSize', fontSize + '%');
 }
 
-// Видео youtube для страницы
 $(function () {
     if ($(".js_youtube")) {
         $(".js_youtube").each(function () {
-            // Зная идентификатор видео на YouTube, легко можно найти его миниатюру
             $(this).css('background-image', 'url(http://i.ytimg.com/vi/' + this.id + '/sddefault.jpg)');
 
-            // Добавляем иконку Play поверх миниатюры, чтобы было похоже на видеоплеер
             $(this).append($('<i class="video__play icon-play"></i>'));
 
         });
 
         $('.video__play, .video__prev').on('click', function () {
-            // создаем iframe со включенной опцией autoplay
             var videoId = $(this).closest('.js_youtube').attr('id');
             var iframe_url = "https://www.youtube.com/embed/" + videoId + "?autoplay=1&autohide=1";
             if ($(this).data('params')) iframe_url += '&' + $(this).data('params');
 
-            // Высота и ширина iframe должны быть такими же, как и у родительского блока
             var iframe = $('<iframe/>', {
                 'frameborder': '0',
                 'src': iframe_url,
             })
 
-            // Заменяем миниатюру HTML5 плеером с YouTube
             $(this).closest('.video__wrapper').append(iframe);
 
         });
     }
 
 });
-
-
-// Деление чисел на разряды Например из строки 10000 получаем 10 000
-// Использование: thousandSeparator(1000) или используем переменную.
-// function thousandSeparator(str) {
-//     var parts = (str + '').split('.'),
-//         main = parts[0],
-//         len = main.length,
-//         output = '',
-//         i = len - 1;
-    
-//     while(i >= 0) {
-//         output = main.charAt(i) + output;
-//         if ((len - i) % 3 === 0 && i > 0) {
-//             output = ' ' + output;
-//         }
-//         --i;
-//     }
-
-//     if (parts.length > 1) {
-//         output += '.' + parts[1];
-//     }
-//     return output;
-// };
-
-
-// Хак для яндекс карт втавленных через iframe
-// Страуктура:
-//<div class="map__wrap" id="map-wrap">
-//  <iframe style="pointer-events: none;" src="https://yandex.ru/map-widget/v1/-/CBqXzGXSOB" width="1083" height="707" frameborder="0" allowfullscreen="true"></iframe>
-//</div>
-// Обязательное свойство в style которое и переключет скрипт
-// document.addEventListener('click', function(e) {
-//     var map = document.querySelector('#map-wrap iframe')
-//     if(e.target.id === 'map-wrap') {
-//         map.style.pointerEvents = 'all'
-//     } else {
-//         map.style.pointerEvents = 'none'
-//     }
-// })
-
-// Простая проверка форм на заполненность и отправка аяксом
-// function formSubmit() {
-//     $("[type=submit]").on('click', function (e){ 
-//         e.preventDefault();
-//         var form = $(this).closest('.form');
-//         var url = form.attr('action');
-//         var form_data = form.serialize();
-//         var field = form.find('[required]');
-//         // console.log(form_data);
-
-//         empty = 0;
-
-//         field.each(function() {
-//             if ($(this).val() == "") {
-//                 $(this).addClass('invalid');
-//                 // return false;
-//                 empty++;
-//             } else {
-//                 $(this).removeClass('invalid');
-//                 $(this).addClass('valid');
-//             }  
-//         });
-
-//         // console.log(empty);
-
-//         if (empty > 0) {
-//             return false;
-//         } else {        
-//             $.ajax({
-//                 url: url,
-//                 type: "POST",
-//                 dataType: "html",
-//                 data: form_data,
-//                 success: function (response) {
-//                     // $('#success').modal('show');
-//                     // console.log('success');
-//                     console.log(response);
-//                     // console.log(data);
-//                     // document.location.href = "success.html";
-//                 },
-//                 error: function (response) {
-//                     // $('#success').modal('show');
-//                     // console.log('error');
-//                     console.log(response);
-//                 }
-//             });
-//         }
-
-//     });
-
-//     $('[required]').on('blur', function() {
-//         if ($(this).val() != '') {
-//             $(this).removeClass('invalid');
-//         }
-//     });
-
-//     $('.form__privacy input').on('change', function(event) {
-//         event.preventDefault();
-//         var btn = $(this).closest('.form').find('.btn');
-//         if ($(this).prop('checked')) {
-//             btn.removeAttr('disabled');
-//             // console.log('checked');
-//         } else {
-//             btn.attr('disabled', true);
-//         }
-//     });
-// }
 
 

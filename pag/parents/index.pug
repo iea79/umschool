@@ -11,13 +11,877 @@ block content
 				img(src="../img/logo.png" alt="")
 
 			nav.nav
-				<a href="../graduates/" class="nav__link"><i class="icon-angle-left"></i> Перейти на страницу для выпускников</a>
-				<a href="#" class="nav__link">Личный кабинет</a>
+				<a href="../graduates/" class="nav__link"><i class="icon-angle-left"></i> <span class="isDesktop">Перейти на страницу </span>для выпускников</a>
+				<a href="http://umschool.net/wpm/start/" target="blank" class="nav__link">Личный кабинет</a>
 					
 	// end header
 	
 	// begin main__content 
 	main.main__content
-		.container_center
+		// begin firstScreen 
+		section.firstScreen.firstScreen_in
 			
+			.container_center
+				.firstScreen__content
+					h1.firstScreen__title 
+						b Готовим выпускников 
+							br 
+							|к ЕГЭ 
+						span.thems__link по 11 предметам
+							.thems__drop
+								.thems__close
+								ul.thems__list
+									li Математика
+									li Русский язык
+									li Литература
+									li Биология
+									li Химия
+									li Обществознание
+									li История
+									li Английский язык
+									li Немецкий язык
+									li Информатика
+									li География 
+						| <br> в режиме
+						b онлайн
+						i.icon-online
+
+					.firstScreen__subtitle
+						p 
+							b Объясняем 
+							|до тех пор, пока не станет понятно!
+
+					.firstScreen__action
+						a.btn.btn_success.btn_icon(href="#programm" data-scrollTo)
+							i.icon-click 
+							|Узнать о программах обучения
+						a.btn.btn_warning.btn_icon(href="http://vk.me/umsch" target="blank")
+							i.icon-pencil 
+							|Записаться на бесплатное занятие
+
+					.firstScreen__grid.isDesktop
+						.firstScreen__gridItem
+							.firstScreen__gridImg 
+								img(src="../img/info1.png", alt="")
+							.firstScreen__gridText Средний балл наших учеников
+						.firstScreen__gridItem
+							.firstScreen__gridImg 
+								img(src="../img/info2.png", alt="")
+							.firstScreen__gridText Все обучение проходит online
+
+				.firstScreen__bage 
+					b В 2018 году 
+					|наши ученики набрали в среднем 
+					br
+					b на 27,5 баллов больше, 
+					|чем усредненный <br>балл по России
+
+				img.firstScreen__prev(src="../img/parents-full.png", alt="")
+
+			img(src="../img/Flask.png" alt="" class="decor decor_flask")
+			img(src="../img/Book2.png" alt="" class="decor decor_book2")
+		// end firstScreen 
+
+		// begin why 
+		section.why#why
+			.container_center
+				img.isMobile(src="../img/point-mob.png", alt="")
+				.why__top
+					img.why__img.isDesktop(src="../img/video-top.png", alt="")
+					h2.section__title 
+						b Узнайте, почему 
+						|11 863 выпускников считают подготовку в УМСКУЛ наиболее эффективной
+				.trapeze
+					.video__wrapper.js_youtube#D1jqPgbT5mI
+						img.video__prev(src="../img/prev1.png", alt="")
+		// end why 
+		
+		// begin time 
+		section.time#time
+			.container_center
+				
+				.time__top
+					.section__title.isDesktop 
+						span.section__titleLeft Ученики в УМСКУЛ 
+							b тратят в
+						span.section__titleRight 
+							b раза больше 
+							br
+							|времени 
+							span.section__titleBage на подготовку к ЕГЭ 
+							br
+							b чем их сверстники 
+						span.section__titleCenter 
+							span.section__titleNum 3,4
+						img.decor.decor_time(src="../img/Time.png", alt="")
+					h2.section__title.isMobile Ученики в УМСКУЛ 
+						b тратят в 4,3 раза больше 
+						|времени, на подготовку к ЕГЭ 
+						b чем их сверстники
+						img.decor.decor_time(src="../img/Time.png", alt="")
+					.time__topRow
+						.time__topLeft
+							p Мы выяснили, сколько времени реально готовятся выпускники к ЕГЭ. Оказалось, что наши ученики занимаются в среднем в 4,3 раза больше, чем ребята, которые готовятся к ЕГЭ самостоятельно и в 2,2 раза больше, чем те, кто готовится с репетитором.
+							p Это и обеспечивает хорошие результаты на ЕГЭ.
+
+						.time__topRight
+							.time__topList
+								.time__topItem
+									img(src="../img/student.png", alt="")
+									.time__topText 
+										span <b>Самостоятельная</b> подготовка
+								.time__topItem.time__topItem_left
+									img(src="../img/teach.png", alt="")
+									.time__topText 
+										span Подготовка <b>с репетитором</b>
+								.time__topItem
+									img(src="../img/bear.png", alt="")
+									.time__topText 
+										span Подготовка <b>в УМСКУЛ</b>
+
+
+				//- .time__bottom
+					.trapeze
+						.labeled__wrap
+							.labeled
+							.time__bottomLeft
+								.section__title Как правильно 
+									b выстроить процесс 
+									|подготовки к ЕГЭ?
+								.time__bage Бесплатный курс
+								ol.listNumber
+									li.listNumber__item с чего начать подготовку к ЕГЭ по каждому предмету?
+									li.listNumber__item как оценить свой уровень знаний и составить программу на весь год?
+									li.listNumber__item где искать полезные и как не наткнуться на бесполезные пособия?
+									li.listNumber__item где найти задачи, приближенные к тем, что будут на ЕГЭ?
+									li.listNumber__item как учесть то, чего не учитывают 90% учеников? 
+							.time__bottomRight
+								img.time__bottomCollage(src="../img/video-group.png", alt="")
+								button.btn.btn_success Бесплатно получить доступ к курсу
+		// end time 
+
+		// begin economy 
+		section.economy#economy
+			.container_center
+				h2.section__title.section__title_center <b>Экономьте время на дорогу:</b>  все занятия <br>проходят онлайн в формате вебинаров
+				.economy__wrap
+					.economy__video
+						.video__wrapper.js_youtube#w0nJPhjpjFU
+							//- img.video__prev(src="../img/prev2.png", alt="")
+							.economy__info 
+								span Посмотрите пример одного 
+								br
+								span из занятий по геометрии
+					.economy__bage 
+						span.economy__bageText
+							b Если вы не успели 
+							|посмотреть вебинар, он будет доступен в записи
+					img.decor.decor_head(src="../img/Head.png", alt="")
+		// end economy 
+		
+		// begin takeFree 
+		section.takeFree#takeFree
+			.container_center
+				h2.section__title.section__title_center <b>Получите по одному занятию</b> <br>на каждый предмет бесплатно!
+				.section__sub Для этого просто нажмите на кнопку ниже и авторизуйся через <br>ВК. Занятия придут в личные сообщения.
+				.takeFree__action
+					a.btn.btn_success(href="https://vk.com/app5728966_-124303372#368208" target="blank") Получите бесплатные занятия
+				img.decor.decor_circule(src="../img/circule.png", alt="")
+		// end takeFree 
+		
+		// begin dz 
+		section.dz#dz
+			.labeled__wrap
+				.labeled
+				.container_center
+					.dz__left
+						.dz__item.active#dz1
+							img(src="../img/zadanie.png", alt="")
+						.dz__item#dz2
+							img(src="../img/zadanie2.png", alt="")
+						.dz__item#dz3
+							img(src="../img/zadanie3.png", alt="")
+					.dz__right
+						h2.section__title Ни одно занятие 
+							b не проходит 
+							br
+							b без домашних заданий, 
+							br
+							|которые проверяют наши 
+							br
+							|кураторы
+						p За неделю ученики выполняют 3 домашних задания по каждому предмету. На каждое уходит 1,5 часа.
+						p Это не просто, но ребята начинают обгонять сверстников уже через 2 недели обучения.
+
+						ul.dz__togle
+							li.dz__arrow.dz__prev.isMobile
+								i.icon-prev
+							li.dz__togleItem.active
+								a.dz__togleLink.active(href="#dz1" data-toggle="tab") Русский язык
+							li.dz__togleItem
+								a.dz__togleLink(href="#dz2" data-toggle="tab") Обществознание
+							li.dz__togleItem
+								a.dz__togleLink(href="#dz3" data-toggle="tab") Физика
+							li.dz__arrow.dz__next.isMobile
+								i.icon-next
+
+			img.decor.decor_aya(src="../img/АЯ.png", alt="")
+			img.decor.decor_pen(src="../img/Pen.png", alt="")
+		// end dz 
+
+		// begin chats 
+		section.chats
+			.container_center
+				.chats__left
+					h2.section__title <b>Общие чаты <br>учеников</b> и поддержка кураторов 24/7
+					.section__sub Здесь вы можете увидеть пример переписки, в которой у ученика возникает вопрос по д/з, а другие ребята и куратор помогают ему разобраться
+				.chats__right
+					.chats__slider
+						.chats__sliderItem
+							img(src="../img/ch1.jpg", alt="")
+						.chats__sliderItem
+							img(src="../img/ch2.jpg", alt="")
+						.chats__sliderItem
+							img(src="../img/ch3.jpg", alt="")
+						.chats__sliderItem
+							img(src="../img/ch4.jpg", alt="")
+						.chats__sliderItem
+							img(src="../img/ch5.jpg", alt="")
+						.chats__sliderItem
+							img(src="../img/ch6.jpg", alt="")
+						.chats__sliderItem
+							img(src="../img/ch7.jpg", alt="")
+		// end chats 
+
+		// begin guide 
+		//- section.guide
+			.container_center
+				.trapeze
+					.labeled__wrap
+						.labeled
+						.guide__left
+							img(src="../img/guide.png", alt="")
+						.guide__right
+							h2.section__title 
+								b Получите пособия 
+								small по правильной подготовке на каждый предмет от ведущих специалистов УМСКУЛ
+							.guide__sell
+								span.guide__price 3 999 
+									span.rub 
+								span.guide__free бесплатно
+							.guide__action
+								button.btn.btn_primary.btn_vk
+									i.icon-vk 
+									|Получить бесплатно
+								.guide__info Авторизуйтесь через ВК и мы сразу же вышлем <br>пособия по подготовке в личном сообщении
+		// end guide 
+		
+		// begin teachers 
+		section.teachers
+			.container_center
+				h2.section__title.section__title_center Каждый 
+					b преподаватель интересно <br>объясняет 
+					|свой предмет и постоянно 
+					br
+					|работает с учениками
+				.trapeze
+					.teachers__tumbs
+						.teachers__tumb
+							.teachers__tumbName Артур Шарафиев
+							.teachers__tumbTheme математика
+						.teachers__tumb
+							.teachers__tumbName Аделия Адамова
+							.teachers__tumbTheme математика
+						.teachers__tumb
+							.teachers__tumbName Анастасия Малова
+							.teachers__tumbTheme обществознание
+						.teachers__tumb
+							.teachers__tumbName Аля Виноградова
+							.teachers__tumbTheme история
+						.teachers__tumb
+							.teachers__tumbName Александр Долгих
+							.teachers__tumbTheme русский язык
+						.teachers__tumb
+							.teachers__tumbName Жанна Казанская
+							.teachers__tumbTheme биология
+						.teachers__tumb
+							.teachers__tumbName Клим Корнеевец
+							.teachers__tumbTheme химия
+						.teachers__tumb
+							.teachers__tumbName Виктория Ланская
+							.teachers__tumbTheme информатика
+						.teachers__tumb
+							.teachers__tumbName Макс Тесла
+							.teachers__tumbTheme физика
+						.teachers__tumb
+							.teachers__tumbName Фариша Князева
+							.teachers__tumbTheme литература
+						.teachers__tumb
+							.teachers__tumbName Юлия Миронова
+							.teachers__tumbTheme английский язык
+						.teachers__tumb
+							.teachers__tumbName Камилла Малиновская
+							.teachers__tumbTheme английский язык
+						.teachers__tumb
+							.teachers__tumbName Виктория Ларионова
+							.teachers__tumbTheme немецкий язык
+						.teachers__tumb
+							.teachers__tumbName Надежда Ковалевская
+							.teachers__tumbTheme базовая математика
+						.teachers__tumb
+							.teachers__tumbName Алина Вернадская
+							.teachers__tumbTheme география
+
+					.teachers__slider
+						.teachers__slide
+							.labeled.labeled_primary.labeled_right
+							.teachers__left
+								.teachers__photo.isMobile
+									img(src="../img/teacher/1-2.png", alt="")
+								.teachers__name Артур Шарафиев
+								.teachers__bage математика
+								.teachers__text Шестой год преподаёт математику, выпустил почти 3 000 учеников. Средний балл учеников в прошлом году — 79,6.
+									br
+									|Наставник призёров и победителей всероссийских олимпиад по математике.
+								.teachers__quote Практика — лучшее средство для выживания в современном мире. Чем больше задач вы решите при подготовке к ЕГЭ, тем выше ваш балл.
+							.teachers__right
+								.teachers__img.isDesktop
+									img(src="../img/teacher/1.png", alt="")
+									img.teachers__imgDec(src="../img/teacher/1-1.png", alt="")
+								.teachers__rate
+									.teachers__rateNum 83,6
+									|Средний балл наших учеников
+
+						.teachers__slide
+							.labeled.labeled_violet.labeled_right
+							.teachers__left
+								.teachers__photo.isMobile
+									img(src="../img/teacher/14-2.png", alt="")
+								.teachers__name Аделия Адамова
+								.teachers__bage математика
+								.teachers__text В 2013 году закончила школу с серебряной медалью и сдала математику на 96 баллов. 5-летний стаж преподавания + красный диплом КФУ по направлению: Преподаватель математики и информатики. На данный момент поступает в магистратуру в Москве.
+								.teachers__quote В этом мире нет нерешаемых проблем, а в ЕГЭ по математике - задач! Все, что нужно от тебя при подготовке - это терпение, спокойствие, трудолюбие и бешеное желание!)
+							.teachers__right
+								.teachers__img.isDesktop
+									img(src="../img/teacher/14.png", alt="")
+									img.teachers__imgDec(src="../img/teacher/1-1.png", alt="")
+								.teachers__rate
+									.teachers__rateNum 78,4
+									|Средний балл наших учеников
+
+						.teachers__slide
+							.labeled.labeled_yellow.labeled_right
+							.teachers__left
+								.teachers__photo.isMobile
+									img(src="../img/teacher/2-2.png", alt="")
+								.teachers__name Анастасия Малова
+								.teachers__bage обществознание
+								.teachers__text В 2016 году сама сдала ЕГЭ по обществознанию на 96 баллов. Уже третий год готовит учеников к экзамену по обществознанию. <br>В прошлом году средний балл учеников был 89,6.
+								.teachers__quote Я студентка Казанского Федерального Университета Института управления, экономики и финансов. И я просто фанат своего дела, обожаю обществознание и каждый раз стараюсь передать это ученикам.
+							.teachers__right
+								.teachers__img.isDesktop
+									img(src="../img/teacher/2.png", alt="")
+									img.teachers__imgDec(src="../img/teacher/2-1.png", alt="")
+								.teachers__rate
+									.teachers__rateNum 89,6
+									|Средний балл наших учеников
+
+						.teachers__slide
+							.labeled.labeled_purple.labeled_right
+							.teachers__left
+								.teachers__photo.isMobile
+									img(src="../img/teacher/3-2.png", alt="")
+								.teachers__name Аля Виноградова
+								.teachers__bage история
+								.teachers__text Готовит к ЕГЭ по истории 6 лет. За последний год 11 учеников набрали 100 баллов на ЕГЭ, больше 100 написали экзамен по истории набрали 90+ баллов.
+								.teachers__quote История сложна только для тех, кто не понимает ее. Учитесь не зубрить, а разбираться в историческом процессе, получать удовольствие от соприкосновения с событиями. Игры, фильмы, аудио, прибаутки дадут жизнь знаниям, а они на основе практики и грамотной методики подготовки выльются в 90+.
+							.teachers__right
+								.teachers__img.isDesktop
+									img(src="../img/teacher/3.png", alt="")
+									img.teachers__imgDec(src="../img/teacher/3-1.png", alt="")
+								.teachers__rate
+									.teachers__rateNum 82,4
+									|Средний балл наших учеников
+
+						.teachers__slide
+							.labeled.labeled_orange.labeled_right
+							.teachers__left
+								.teachers__photo.isMobile
+									img(src="../img/teacher/4-2.png", alt="")
+								.teachers__name Александр Долгих
+								.teachers__bage русский язык
+								.teachers__text Третий год готовит учеников к ЕГЭ по русскому языку. В 2018 выпустил 12 стобалльников, 27 учеников, сдавших ЕГЭ на 98 баллов и 30 - на 95 баллов.
+								.teachers__quote Грамотно быть модно! <br>И это важно понимать. Мода на подвороты пройдет, как и мода на знание всех рэперов. Мода на спиннеры уже прошла, как и мода на знание всех блогеров. А вот грамотность? Красота речи всегда будет с тобой, дружище!
+							.teachers__right
+								.teachers__img.isDesktop
+									img(src="../img/teacher/4.png", alt="")
+									img.teachers__imgDec(src="../img/teacher/4-1.png", alt="")
+								.teachers__rate
+									.teachers__rateNum 94,2
+									|Средний балл наших учеников
+
+						.teachers__slide
+							.labeled.labeled_green.labeled_right
+							.teachers__left
+								.teachers__photo.isMobile
+									img(src="../img/teacher/5-2.png", alt="")
+								.teachers__name Жанна Казанская
+								.teachers__bage биология
+								.teachers__text В 2012 году сдала ЕГЭ по биологии на 100 баллов, по химии на 100 баллов, по русскому на 90 баллов. Пятый год преподает биологию выпускникам. В 2018 закончила КГМУ с отличием.
+								.teachers__quote Нам предстоит интенсивный и интересный год. Я научу вас по-другому относиться к ЕГЭ, щёлкать задачки и творчески подходить к заданиям второй части. ЕГЭ на 100 - просто!
+							.teachers__right
+								.teachers__img.isDesktop
+									img(src="../img/teacher/5.png", alt="")
+									img.teachers__imgDec(src="../img/teacher/5-1.png", alt="")
+								.teachers__rate
+									.teachers__rateNum 96,0
+									|Средний балл наших учеников
+
+						.teachers__slide
+							.labeled.labeled_primary.labeled_right
+							.teachers__left
+								.teachers__photo.isMobile
+									img(src="../img/teacher/6-2.png", alt="")
+								.teachers__name Клим Корнеевец
+								.teachers__bage химия
+								.teachers__text Призёр, лауреат и победитель всероссийских олимпиад по химии и биологии. Является членом общества «Научно-интеллектуальный потенциал России». <br>На ЕГЭ 2018 года 3 его ученика набрали 100 баллов, 7 — 98 баллов, и 41 ученик — на 80+ баллов.
+								.teachers__quote Никогда не делайте то, что не любите — пара слов о том, к чему может привести безответное отношение к наукам.
+							.teachers__right
+								.teachers__img.isDesktop
+									img(src="../img/teacher/6.png", alt="")
+									img.teachers__imgDec(src="../img/teacher/6-1.png", alt="")
+								.teachers__rate
+									.teachers__rateNum 85,0
+									|Средний балл наших учеников
+
+						.teachers__slide
+							.labeled.labeled_lgreen.labeled_right
+							.teachers__left
+								.teachers__photo.isMobile
+									img(src="../img/teacher/7-2.png", alt="")
+								.teachers__name Виктория Ланская
+								.teachers__bage информатика
+								.teachers__text В 2018 году окончила школу с золотой медалью, сдала ЕГЭ по информатике на 100 баллов. Поступила в Казанский Федеральный Университет Высшей школы информационных технологий и информационных систем. 
+								.teachers__quote Искренне люблю свой предмет и считаю, что его должен полюбить каждый, кто собирается сдавать экзамен. Ведь будущее за людьми, умеющими логически мыслить. Учу понимать и думать, а не зубрить решения!
+							.teachers__right
+								.teachers__img.isDesktop
+									img(src="../img/teacher/7.png", alt="")
+									img.teachers__imgDec(src="../img/teacher/7-1.png", alt="")
+								.teachers__rate
+									.teachers__rateNum 84,8
+									|Средний балл наших учеников
+
+						.teachers__slide
+							.labeled.labeled_lprimary.labeled_right
+							.teachers__left
+								.teachers__photo.isMobile
+									img(src="../img/teacher/8-2.png", alt="")
+								.teachers__name Макс Тесла
+								.teachers__bage физика
+								.teachers__text Студент МГУ им. Ломоносова механико-математический факультета. В 2017 году сдал ЕГЭ по физике на 96 баллов, математику - 98, русский - 100. 
+									br
+									|Второй год готовит ребят к ЕГЭ по физике. В 2018 году выпустил 69 учеников, набравших 85+ баллов, среди которых 3 стобалльника.
+								.teachers__quote Моя цель — помочь вам определить направление подготовки и познакомить с физикой, одной из самых поразительных наук на свете.
+							.teachers__right
+								.teachers__img.isDesktop
+									img(src="../img/teacher/8.png", alt="")
+									img.teachers__imgDec(src="../img/teacher/8-1.png", alt="")
+								.teachers__rate
+									.teachers__rateNum 82,0
+									|Средний балл наших учеников
+
+						.teachers__slide
+							.labeled.labeled_gray.labeled_right
+							.teachers__left
+								.teachers__photo.isMobile
+									img(src="../img/teacher/9-2.png", alt="")
+								.teachers__name Фариша Князева
+								.teachers__bage литература
+								.teachers__text Студентка факультета журналистики МГУ. Сдала ЕГЭ по литературе на 100 баллов. В 2018 году выпустила 25-стобалльников, 123 ученика набрали 90+, 252 выпускника 80+ благодаря уникальной методике подготовки к ЕГЭ. Написала авторский цитатник, который помог набрать абитуриентам высокие баллы на экзамене по литературе.
+								.teachers__quote В этом учебном году у нас получится разобрать все произведения подробно и обстоятельно. Мы рассмотрим все темы сочинений, всю теорию литературы, и ЕГЭ не будет помехой при поступлении в вуз мечты.
+							.teachers__right
+								.teachers__img.isDesktop
+									img(src="../img/teacher/9.png", alt="")
+									img.teachers__imgDec(src="../img/teacher/9-1.png", alt="")
+								.teachers__rate
+									.teachers__rateNum 90,0
+									|Средний балл наших учеников
+
+						.teachers__slide
+							.labeled.labeled_lprimary.labeled_right
+							.teachers__left
+								.teachers__photo.isMobile
+									img(src="../img/teacher/10-2.png", alt="")
+								.teachers__name Юлия Миронова
+								.teachers__bage английский язык
+								.teachers__text В 2016 году сдала ЕГЭ по англйискому языку на 96 баллов. Третий год преподает английский язык в онлайн-школе УмСкул. За время подготовки с ней, ученики с низким уровнем сдавали ЕГЭ на 80+. Доказала, что английский это не так сложно и привила любовь к языку.
+								.teachers__quote В этом году я научу вас писать писать эссе на максимальный балл. Расширю по максимуму ваш словарный запас и выведу на новый уровень знания английского. Язык - это свобода. Делайте то, что доставляет удовольствие, значит будете свободными.
+							.teachers__right
+								.teachers__img.isDesktop
+									img(src="../img/teacher/10.png", alt="")
+									img.teachers__imgDec(src="../img/teacher/10-1.png", alt="")
+								.teachers__rate
+									.teachers__rateNum 88,6
+									|Средний балл наших учеников
+
+						.teachers__slide
+							.labeled.labeled_violet.labeled_right
+							.teachers__left
+								.teachers__photo.isMobile
+									img(src="../img/teacher/15-2.png", alt="")
+								.teachers__name Камилла Малиновская
+								.teachers__bage английский язык
+								.teachers__text В 2016 году сдала ЕГЭ по английскому языку на 98 баллов. Поступила в Казанский Федеральный Университет, Институт международных отношений, истории и востоковедения.
+								.teachers__quote Чтобы дойти до цели,нужно идти. Я постараюсь сделать этот путь максимально интересным и продуктивным. Изучение языков-моя страсть, и я буду рада предать свой опыт и любовь к английскому языку ученикам.
+							.teachers__right
+								.teachers__img.isDesktop
+									img(src="../img/teacher/15.png", alt="")
+									img.teachers__imgDec(src="../img/teacher/10-1.png", alt="")
+								.teachers__rate
+									.teachers__rateNum 86,8
+									|Средний балл наших учеников
+
+						.teachers__slide
+							.labeled.labeled_red.labeled_right
+							.teachers__left
+								.teachers__photo.isMobile
+									img(src="../img/teacher/11-2.png", alt="")
+								.teachers__name Виктория Ларионова
+								.teachers__bage немецкий язык
+								.teachers__text В 2018 году сдала ЕГЭ по немецкому языку на 95 баллов. Преподает немецкий язык в онлайн-школе Умскул.
+								.teachers__quote В этом году я научу вас выполнять все задания ЕГЭ по немецкому на максимальные баллы. Готовясь вместе со мной, ребята без труда разбираются в самых сложных темах, пишут эссе на 14 баллов и устную часть на 18-20 баллов!
+							.teachers__right
+								.teachers__img.isDesktop
+									img(src="../img/teacher/11.png", alt="")
+									img.teachers__imgDec(src="../img/teacher/11-1.png", alt="")
+								.teachers__rate
+									.teachers__rateNum 92,0
+									|Средний балл наших учеников
+
+						.teachers__slide
+							.labeled.labeled_violet.labeled_right
+							.teachers__left
+								.teachers__photo.isMobile
+									img(src="../img/teacher/12-2.png", alt="")
+								.teachers__name Надежда Ковалевская
+								.teachers__bage базовая математика
+								.teachers__text Закончила лучший физ-мат лицей в Казани. В 2017 году защитила ВУЗовский диплом по специальности «Информационная безопасность». 
+									br 
+									|На данный момент получает второе высшее (педагогическое) 
+									br 
+									|Готовит ребят к ЕГЭ по профильной и базовой математике уже 6-й год, неоднократно сдавала ЕГЭ по профилю (балл - 98).
+								.teachers__quote Я занимаюсь тем, что мне действительно нравится и приносит удовольствие. Многим математика кажется чересчур сложной, и я очень хочу научить вас её ПОНИМАТЬ.
+							.teachers__right
+								.teachers__img.isDesktop
+									img(src="../img/teacher/12.png", alt="")
+									img.teachers__imgDec(src="../img/teacher/12-1.png", alt="")
+								.teachers__rate
+									.teachers__rateNum 5,0
+									|Средний балл наших учеников
+
+						.teachers__slide
+							.labeled.labeled_warning.labeled_right
+							.teachers__left
+								.teachers__photo.isMobile
+									img(src="../img/teacher/13-2.png", alt="")
+								.teachers__name Алина Вернадская
+								.teachers__bage география
+								.teachers__text Сдала ЕГЭ по географии на 92 балла. 
+									br 
+									|Огромная любовь к природе зародилась ещё в раннем детстве. В полтора года пошла в свой первый поход. Сейчас в ее копилке тысячи пеших километров и десятки преодоленных вершин.
+								.teachers__quote География у меня в крови: мои родители – географы. Мой душевно-географический порыв без зазубривания приведёт тебя к максимальному баллу и ВУЗу мечты!
+							.teachers__right
+								.teachers__img.isDesktop
+									img(src="../img/teacher/13.png", alt="")
+									img.teachers__imgDec(src="../img/teacher/13-1.png", alt="")
+								.teachers__rate
+									.teachers__rateNum 85,7
+									|Средний балл наших учеников
+
+				.teachers__sub 
+					b Приходите 
+					|на любое из наших занятий 
+					b бесплатно
+				.teachers__action
+					a.btn.btn_success.btn_icon(href="https://vk.com/app5728966_-124303372#368214" target="blank") 
+						i.icon-pencil 
+						|Записаться на бесплатное занятие
+		// end teachers 
+		
+		// begin knowlege 
+		section.knowlege
+			.container_center
+				h2.section__title.section__title_center 
+					b Мы делимся знаниями, 
+					|которые сами <br>по себе позволяют подготовиться на хорошие <br>баллы и компенсируют репетиторов
+					// begin knowlege__grid
+				.grid.grid__2.knowlege__grid
+					div
+						#vk_groups
+					div
+						.youtube__viget
+							.youtube__vigetWrap
+								.youtube__vigetLogo
+									img(src="../img/yuotube-channel.jpg", alt="")
+								.youtube__vigetAction
+									a(href="https://www.youtube.com/channel/UCggA5GaSPVyjsqomtwR5ufw?view_as=subscriber" target="blank").youtube__vigetName Умскул - онлайн-школа
+									div
+										div(class="g-ytsubscribe" data-channelid="UCggA5GaSPVyjsqomtwR5ufw" data-layout="default" data-count="default")
+				// end knowlege__grid
+				img.decor.decor_magnit(src="../img/Magnet.png", alt="")
+				img.decor.decor_line(src="../img/Line.png", alt="")
+		// end knowlege 
+
+		// begin vabinars 
+		section.vabinars
+			h2.section__title.section__title_center 
+				b Проводим бесплатные вебинары <br>
+				|по всем предметам каждую неделю
+			// begin vabinars__grid
+			.grid.grid__3.vabinars__grid
+				div
+					.vabinars__video
+						.video__wrapper.js_youtube#oOMBEPICJ9I
+							//- img.video__prev(src="../img/prev2.png", alt="")
+				div
+					.vabinars__video
+						.video__wrapper.js_youtube#YysAoCybh9I
+							//- img.video__prev(src="../img/prev2.png", alt="")
+				div
+					.vabinars__video
+						.video__wrapper.js_youtube#1a2kdbjUSRI
+							//- img.video__prev(src="../img/prev2.png", alt="")
+			// end vabinars__grid
+			
+			.container_center
+				.vabinars__subscribe
+					.label
+					.vabinars__label
+						b Подпишитесь на уведомления 
+						br
+						|о наших бесплатных вебинарах
+					.vabinars__action
+						a.btn.btn_primary.btn_vk(href="https://vk.com/app5728966_-124303372#368214" target="blank")
+							i.icon-vk 
+							|Подписаться
+						.vabinars__info Подпишитесь и мы будем оповещать вас 
+							br
+							|в личных сообщениях обо всех вебинарах
+		// end vabinars 
+
+		// begin control 
+		section.control
+			.container_center
+				h2.section__title.section__title_center Проводим 
+					b еженедельный контроль
+					br
+					b качества преподавания 
+					|и собираем 
+					br 
+					|отзывы учеников и родителей
+				.control__swich
+					.control__swichItem(data-slider="#revGraduates") Отзывы учеников
+					.control__swichItem.active(data-slider="#revParent") Отзывы родителей
+				.control__wrap#revGraduates
+					.control__slider#slideGraduates
+						.control__sliderItem
+							img(src="../img/review/1.jpg", alt="")
+						.control__sliderItem
+							img(src="../img/review/2.jpg", alt="")
+						.control__sliderItem
+							img(src="../img/review/3.jpg", alt="")
+						.control__sliderItem
+							img(src="../img/review/4.jpg", alt="")
+						.control__sliderItem
+							img(src="../img/review/5.jpg", alt="")
+						.control__sliderItem
+							img(src="../img/review/6.jpg", alt="")
+				.control__wrap.control__wrap_parent.active#revParent
+					.control__rev
+						.control__revSlide#slideParent
+							div
+								.control__revTop
+									.control__revLeft
+										.control__revPhoto
+											img(src="../img/review/p1-sm.jpg", alt="")
+									.control__revRight
+										.control__revText
+											p Спасибо огромное онлайн школе УМСКУЛ за подготовку моей дочери к ЕГЭ.
+											p Сколько было куплено сборников, репетиторов и доп.занятий. В итоге, приложив усилия и постарались, все прошли. 
+											p Результаты: 89 русский, 80 обществознание и 100 литература. Спасибо всем ребятам из УМСКУЛ. 😁
+											.control__revName Татьяна Кононенко (Мама) г. Москва
+								.control__revBottom
+									.video__wrapper.js_youtube#N3Yy5PFYtrs
+										//- img.video__prev(src="../img/prev3.png", alt="")
+							div
+								.control__revTop
+									.control__revLeft
+										.control__revPhoto
+											img(src="../img/review/p2-sm.jpg", alt="")
+									.control__revRight
+										.control__revText
+											p ЕГЭ - в наше время звучит как приговор. Какие предметы выбрать, как готовиться, как найти репетиторов, которые смогут хорошо подготовить ребенка к этому ответственному мероприятию, от которого зависит дальнейшая судьба.
+											p Вот и перед нами встал этот вопрос. Заниматься с репетитором на дому- весьма дорогое удовольствие, школа не даёт необходимых знаний для результата 90-100 баллов. Интернет предложений много, как не ошибиться и выбрать оптимальный вариант по качеству и доступности. Конечно были опасения, (нарваться на мошенников), ведь интернет услуги - это плодотворная почва для обмана. И вот Умскул, эту организацию выбрали по отзывам, так же привлекла доступная стоимость занятий.
+											p Дочь решила сдавать обществознание, нужно отметить, в нее не верили школьные учителя, да и репетитор откровенно считал ее слабенькой. Но 93 балла, стали достойной наградой. Умскул помогает школьнику подготовить себя к самым сложным вопросам. Конечно без колоссального труда ничего не получится, но преподаватели этой организации доступно и легко вкладывают в головы учеников необходимые знания. Кто хочет получить высокие баллы на ЕГЭ, смело обращайтесь в Умскул.
+											p Это качественно и это доступно.
+											.control__revName Екатерина Мягкова (Мама) г. Санкт-Петербург
+								.control__revBottom
+									.video__wrapper.js_youtube#D1jqPgbT5mI
+										//- img.video__prev(src="../img/prev3.png", alt="")
+							div
+								.control__revTop
+									.control__revLeft
+										.control__revPhoto
+											img(src="../img/review/p3-sm.jpg", alt="")
+									.control__revRight
+										.control__revText
+											p Год назад Яша подошел к нам и сказал: «Родители, вы знаете, что я хочу поступать на мед и поэтому буду сдавать химию.
+											p Мне сказали, что есть онлайн занятия в умскул именно по этому предмету, его ведёт студент, который сам учится в меде.»
+											p Конечно, первое время мы переживали за полноту подачи материала, ведь студенты не имеют образования учителя. Но потом мы все вместе посмотрели бесплатный вебинар Клима и, недолго думая, мы согласились и взяли мг.
+											p Ну а теперь итоги годового обучения в умскул:
+											p 1. Яша сдал ЕГЭ по химии на 95 баллов, поступил на бюджет стомата в ЯГМУ, где конкурс на одно место был 600 чел, и было всего 5 бюджетных.
+											p 2. Вечерами, когда многие молодые люди бездумно слоняются по улицам, Яша занимался, причем занятия в умскул реально нравились сыну, и обучался он без всякого принуждения, наоборот, всегда переживал, если приходилось пропускать занятия.
+											p В общем большое спасибо умскул за все, что дали моему сыну!!!
+											p И каждому родителю, чей ребенок будет сдавать химию, я рекомендую занятия с Климом!
+											.control__revName Лушков Роман (Папа) г. Сыктывкар
+								.control__revBottom
+									.video__wrapper.js_youtube#D1jqPgbT5mI
+										//- img.video__prev(src="../img/prev3.png", alt="")
+							div
+								.control__revTop
+									.control__revLeft
+										.control__revPhoto
+											img(src="../img/review/p4-sm.jpg", alt="")
+									.control__revRight
+										.control__revText
+											p моя дочь Александра занималась химией в умскул с ноября 17 года. Сдала химию на 74 балла
+											p дочка сама нашла вашу школу, сначала мы не верили в действенность онлайн уроков, но позже жалели, что не нашли вас раньше.
+											p я убеждена, что онлайн школа «умскул» – одно из лучших мест для подготовки, потому что идёт постоянное изучение предмета. более того, дети учатся организовывать себя самостоятельно.
+											p огромное спасибо преподавателю за его умение преподнести курс так интересно и популярно.
+											p «куда бы не привел вас жизненный путь, главное – оставаться человеком,» - эти слова Клима до сих пор вспоминает наша семья.
+											p я рада, что моя дочь занималась у вас.
+											p мы уже даже успели посоветовать умскул нескольким знакомым.
+											.control__revName Юлия Кузнецова (Мама) г. Санкт-Петербург
+								.control__revBottom
+									.video__wrapper.js_youtube#D1jqPgbT5mI
+										//- img.video__prev(src="../img/prev3.png", alt="")
+				img.decor.decor_penL(src="../img/Pen2.png", alt="")
+				img.decor.decor_pencil(src="../img/Pencil.png", alt="")
+		// end control 
+
+		// begin programm 
+		section.programm#programm
+			h2.section__title.section__title_center
+				b Наши программы 
+				br
+				|подготовки к ЕГЭ
+			.container_center
+				.programm__item
+					.labeled
+					.programm__top
+						.programm__left
+							.programm__title Спецкурс
+								.programm__price 350 
+									span.rub
+							.programm__sub 3 онлайн-занятия. Изучение одного раздела
+							.programm__text
+								p Курс, состоящий из <b>3 онлайн-занятий</b>, с домашним заданием и его проверкой. На курсе изучаем один из разделов по предмету и учимся решать задания, которые попадаются на ЕГЭ. 
+								p На выходе – полное понимание темы и умение решать любые задачи по ней.
+						.programm__right
+							img.programm__book(src="../img/Box1.png", alt="")
+							.programm__label каждый месяц
+					.programm__bottom
+						.programm__bottomLeft
+							a.btn.btn_success(href="https://pay.umschool.net" target="blank") Оплатить
+						.programm__bottomRight
+							a.btn.btn_show(href="https://vk.com/app5728966_-124303372#368208" target="blank") Посмотреть одно занятие бесплатно
+						.programm__bottomCenter или
+				.programm__item
+					.labeled
+					.programm__top
+						.programm__left
+							.programm__title Мастер-группа
+								.programm__price 2 650 
+									span.rub
+							.programm__sub Полный курс подготовки. 12-16 занятий в месяц
+							.programm__text
+								p <b>Онлайн-занятия</b> в группе до 30 человек. Домашняя работа + её проверка. Связь с преподавателем 24/7. У каждого ученика свой наставник, который следит за ходом обучения и помогает по любым вопросам. 
+								p На выходе: знание всего материала и умение решать типовые задачи ЕГЭ. 
+						.programm__right
+							img.programm__book(src="../img/Box2.png", alt="")
+							.programm__label каждый месяц
+					.programm__bottom
+						.programm__bottomLeft
+							a.btn.btn_success(href="https://pay.umschool.net" target="blank") Оплатить
+						.programm__bottomRight
+							a.btn.btn_show(href="https://vk.com/app5728966_-124303372#368208" target="blank") Посмотреть одно занятие бесплатно
+						.programm__bottomCenter или
+				.programm__item
+					.labeled
+					.programm__top
+						.programm__left
+							.programm__title Мастер-группа 
+								small (2 предмета)
+								.programm__price 
+									.programm__priceLabel цена со скидкой
+									|4 500 
+									span.rub
+									.old 5 300 
+										span.rub
+							.programm__sub Полный курс подготовки. 12-16 занятий в месяц
+							.programm__text
+								p <b>Онлайн-занятия</b> в группе до 30 человек. Домашняя работа + её проверка. Связь с преподавателем 24/7. У каждого ученика свой наставник, который следит за ходом обучения и помогает по любым вопросам. 
+								p На выходе: знание всего материала и умение решать типовые задачи ЕГЭ. 
+						.programm__right
+							img.programm__book(src="../img/Box3.png", alt="")
+							.programm__label каждый месяц
+					.programm__bottom
+						.programm__bottomLeft
+							a.btn.btn_success(href="https://pay.umschool.net" target="blank") Оплатить
+						.programm__bottomRight
+							a.btn.btn_show(href="https://vk.com/app5728966_-124303372#368208" target="blank") Посмотреть одно занятие бесплатно
+						.programm__bottomCenter или
+				img.decor.decor_coins(src="../img/Coins.png", alt="")
+		// end programm 
+
+		// begin freeTarif 
+		section.freeTarif
+			.container_center
+				h2.section__title.section__title_center
+					b Пока не готовы платить деньги?
+
+				.freeTarif__subscribe
+					.label
+					.freeTarif__title Бесплатный тариф
+					.freeTarif__label Открытые и доступные для всех онлайн вебинары, которые проводятся раз в неделю по каждому предмету
+					.freeTarif__action
+						a.btn.btn_primary.btn_vk(href="https://vk.com/app5728966_-124303372#368208" target="blank")
+							i.icon-vk 
+							|Получить бесплатно
+					.freeTarif__info Подпишитесь и мы будем оповещать вас 
+						br
+						|в личных сообщениях обо всех вебинарах
+		// end freeTarif
+
+		// begin subscribe 
+		section.subscribe
+			.container_center
+				.subscribe__img
+					img(src="../img/openmagazin.png", alt="")
+				img.decor.decor_compass(src="../img/Compass.png", alt="")
+				img.decor.decor_microscop(src="../img/Microscope.png", alt="")
+				h2.section__title.section__title_center
+					b Подпишитесь на УМСКУЛ-журнал
+				.section__sub и можете отказаться от репетитора — <br>он вам больше не нужен
+
+				a.btn.btn_primary.btn_vk(href="https://vk.com/app5728966_-124303372#306062" target="blank")
+					i.icon-vk 
+					|Подписаться на УМСКУЛ-журнал
+				.subscribe__info
+					.label
+					.subscribe__title Что это такое?
+					p Это полезные статьи для выпускников по подготовке к ЕГЭ. В них мы расскажем о том, как правильно выстроить свое время при подготовке к экзаменам, как пронести шпаргалки. Если кто-то из наших учеников и знакомых незадолго до экзаменов получит варианты реальных КИМов — мы их тоже обязательно выложим.
+					p Это и многое другое для вас бесплатно.
+		// end subscribe  
+
 	// end main__content 

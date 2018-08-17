@@ -12,6 +12,7 @@
 	text-decoration: none;
 	display: inline-block;
 	background-color: $btn_default_bg_color;
+	background-size: 100% 200%;
 	text-align: center;
 	max-width: 100%;
 	cursor: pointer;
@@ -48,7 +49,7 @@
 		color: $color_withe;
 		box-shadow: inset 0 -0.312em 0.625em rgba(131, 180, 235, 0.4), inset 0 -0.062em 0.313em rgba(131, 180, 235, 0.5), inset 0 0.125em 0.625em rgba(131, 180, 235, 0.5);
 		background-color: $color_success;
-		background-image: linear-gradient(to top, #4e75a0 0%, #83b4eb 100%);
+		background-image: linear-gradient(to top, #4e75a0 40%, #83b4eb 100%);
 		&:hover {
 			color: $color_withe;
 			box-shadow: inset 0 -0.312em 0.625em rgba(131, 180, 235, 0.4), inset 0 -0.062em 0.313em rgba(131, 180, 235, 0.5), inset 0 0.125em 0.625em rgba(131, 180, 235, 0.5);
@@ -62,7 +63,6 @@
 		color: $color_withe;
 		text-shadow: 0 0.063em 0 rgba(27, 122, 119, 0.15);
 		background-image: linear-gradient(to top, #f68d38 40%, #fec371 100%);
-		background-size: 100% 200%;
 		box-shadow: 0 2.188em 4.375em rgba(247, 152, 67, 0.35), inset 0 -0.312em 0.625em rgba(251, 188, 100, 0.4), inset 0 -0.062em 0.313em rgba(251, 188, 100, 0.5), inset 0 0.125em 0.625em rgba(251, 188, 100, 0.5);
 		&:hover {
 			color: $color_withe;
@@ -85,6 +85,22 @@
 			background-color: #90ac28;
 			color: $color_withe;
 		}
+	}
+	&_vk {
+		padding-left: 5.5em;
+		.icon-vk {
+			position: absolute;
+			height: 100%;
+			width: 21.6%;
+			text-align: center;
+			border-right: .08em solid rgba(#fff, .3);
+			left: 0;
+			top: 0;
+			line-height: 3.1;
+			font-size: 1.7em;
+		}
+	}
+	&_show {
 	}
 	// @each $status_el, $color_bg in $el_colors {
 	// 	&_#{$status_el} {

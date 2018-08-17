@@ -82,5 +82,16 @@
 	&__right {
 		float: right;
 	}
+	@media (max-width: 767px) {
+	    &__left, &__right {
+			float: none;
+			width: auto;
+			margin-bottom: 3em;
+			text-align: center;
+	    }
+	    &__right {
+
+	    }
+	}
 }
 

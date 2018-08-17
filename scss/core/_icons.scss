@@ -50,3 +50,31 @@
   background-size: 100%;
   display: inline-block;
 }
+.icon-next {
+    display: block;
+    text-align: center;
+    &:before {
+      content: '';
+      width: 1.2em;
+      height: 1em;
+      display: inline-block;
+      background: url('../img/next.png') no-repeat center center;
+      background-size: contain;
+    }
+}
+
+.icon-prev {
+    display: block;
+    text-align: center;
+    &:before {
+      content: '';
+      width: 1.2em;
+      height: 1em;
+      display: inline-block;
+      transform: rotate(180deg);
+      background: url('../img/next.png') no-repeat center center;
+      background-size: 100%;
+    }
+}
+
+

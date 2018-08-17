@@ -6,7 +6,7 @@
     <meta name="keywords" content=""/>
     <meta name="description" content=""/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"/>
-    <link href="../css/style.css" rel="stylesheet"/>
+    <link href="../css/style.css?0.3" rel="stylesheet"/>
   </head>
 </html>
 <body>
@@ -14,8 +14,8 @@
     <!-- begin header-->
     <header class="header header_nav">
       <div class="container_center"><a class="header__logo" href="../"><img src="../img/logo.png" alt=""/></a>
-        <nav class="nav"><a href="../parents/" class="nav__link"><i class="icon-angle-left"></i> Перейти на страницу для родителей</a>
-<a href="#" class="nav__link">Личный кабинет</a>
+        <nav class="nav"><a href="../parents/" class="nav__link"><i class="icon-angle-left"></i> <span class="isDesktop">Перейти на страницу </span>для родителей</a>
+<a href="http://umschool.net/wpm/start/" target="blank" class="nav__link">Личный кабинет</a>
         </nav>
       </div>
     </header>
@@ -26,15 +26,28 @@
       <section class="firstScreen firstScreen_in">
         <div class="container_center">
           <div class="firstScreen__content">
-            <h1 class="firstScreen__title"> <b>Готовим выпускников <br/>к ЕГЭ </b>по 11 предметам <br/>в режиме <b>онлайн</b><i class="icon-online"></i></h1>
+            <h1 class="firstScreen__title"> <b>Готовим выпускников <br/>к ЕГЭ </b><span class="thems__link">по 11 предметам 
+                <div class="thems__drop"> 
+                  <div class="thems__close"> </div>
+                  <ul class="thems__list"> 
+                    <li>Математика</li>
+                    <li>Русский язык</li>
+                    <li>Литература</li>
+                    <li>Биология</li>
+                    <li>Химия</li>
+                    <li>Обществознание</li>
+                    <li>История</li>
+                    <li>Английский язык</li>
+                    <li>Немецкий язык</li>
+                    <li>Информатика</li>
+                    <li>География</li>
+                  </ul>
+                </div></span><br> в режиме<b>онлайн</b><i class="icon-online"></i></h1>
             <div class="firstScreen__subtitle">
               <p> <b>Объясняем </b>до тех пор, пока не станет понятно!</p>
             </div>
-            <div class="firstScreen__action">
-              <buttons class="btn btn_success btn_icon"><i class="icon-click"> </i>Узнать о программах обучения</buttons>
-              <buttons class="btn btn_warning btn_icon"><i class="icon-pencil"> </i>Записаться на бесплатное занятие</buttons>
-            </div>
-            <div class="firstScreen__grid">
+            <div class="firstScreen__action"><a class="btn btn_success btn_icon" href="#programm" data-scrollTo="data-scrollTo"><i class="icon-click"> </i>Узнать о программах обучения</a><a class="btn btn_warning btn_icon" href="http://vk.me/umsch" target="blank"><i class="icon-pencil"> </i>Записаться на бесплатное занятие</a></div>
+            <div class="firstScreen__grid isDesktop">
               <div class="firstScreen__gridItem">
                 <div class="firstScreen__gridImg"> <img src="../img/info1.png" alt=""/></div>
                 <div class="firstScreen__gridText">Средний балл наших учеников</div>
@@ -51,13 +64,13 @@
       <!-- end firstScreen -->
       <!-- begin why -->
       <section class="why" id="why">
-        <div class="container_center">
-          <div class="why__top"><img class="why__img" src="../img/video-top.png" alt=""/>
+        <div class="container_center"><img class="isMobile" src="../img/point-mob.png" alt=""/>
+          <div class="why__top"><img class="why__img isDesktop" src="../img/video-top.png" alt=""/>
             <h2 class="section__title"> <b>Узнайте, почему </b>11 863 выпускников считают подготовку в УМСКУЛ наиболее эффективной</h2>
           </div>
           <div class="trapeze">
-            <div class="video__wrapper js_youtube" id="Y2uDpiHRz2Q"><img class="video__prev" src="../img/prev1.png" alt=""/></div>
-          </div>
+            <div class="video__wrapper js_youtube" id="D1jqPgbT5mI"></div>
+          </div><img class="decor decor_book" src="../img/book.png" alt=""/>
         </div>
       </section>
       <!-- end why -->
@@ -65,7 +78,8 @@
       <section class="time" id="time">
         <div class="container_center">
           <div class="time__top">
-            <h2 class="section__title"> <span class="section__titleLeft">Ученики в УМСКУЛ <b>тратят в</b></span><span class="section__titleRight"> <b>раза больше </b><br/>времени <span class="section__titleBage">на подготовку к ЕГЭ </span><br/><b>чем их сверстники </b></span><span class="section__titleCenter"> <span class="section__titleNum">3,4</span></span><img class="decor decor_time" src="../img/Time.png" alt=""/></h2>
+            <div class="section__title isDesktop"> <span class="section__titleLeft">Ученики в УМСКУЛ <b>тратят в</b></span><span class="section__titleRight"> <b>раза больше </b><br/>времени <span class="section__titleBage">на подготовку к ЕГЭ </span><br/><b>чем их сверстники </b></span><span class="section__titleCenter"> <span class="section__titleNum">3,4</span></span><img class="decor decor_time" src="../img/Time.png" alt=""/></div>
+            <h2 class="section__title isMobile">Ученики в УМСКУЛ <b>тратят в 4,3 раза больше </b>времени, на подготовку к ЕГЭ <b>чем их сверстники</b><img class="decor decor_time" src="../img/Time.png" alt=""/></h2>
             <div class="time__topRow">
               <div class="time__topLeft">
                 <p>Мы выяснили, сколько времени реально готовятся выпускники к ЕГЭ. Оказалось, что наши ученики занимаются в среднем в 4,3 раза больше, чем ребята, которые готовятся к ЕГЭ самостоятельно и в 2,2 раза больше, чем те, кто готовится с репетитором.</p>
@@ -88,7 +102,8 @@
           </div>
           <div class="time__bottom">
             <div class="trapeze">
-              <div class="labeled">
+              <div class="labeled__wrap">
+                <div class="labeled"></div>
                 <div class="time__bottomLeft">
                   <div class="section__title">Как правильно <b>выстроить процесс </b>подготовки к ЕГЭ?</div>
                   <div class="time__bage">Бесплатный курс</div>
@@ -100,9 +115,7 @@
                     <li class="listNumber__item">как учесть то, чего не учитывают 90% учеников? </li>
                   </ol>
                 </div>
-                <div class="time__bottomRight"><img class="time__bottomCollage" src="../img/video-group.png" alt=""/>
-                  <button class="btn btn_success">Бесплатно получить доступ к курсу</button>
-                </div>
+                <div class="time__bottomRight"><img class="time__bottomCollage" src="../img/video-group.png" alt=""/><a class="btn btn_success" href="https://vk.com/app5728966_-124303372#368207" target="blank">Бесплатно получить доступ к курсу</a></div>
               </div>
             </div>
           </div>
@@ -115,8 +128,8 @@
           <h2 class="section__title section__title_center"><b>Экономьте время на дорогу:</b>  все занятия <br>проходят онлайн в формате вебинаров</h2>
           <div class="economy__wrap">
             <div class="economy__video">
-              <div class="video__wrapper js_youtube" id="Y2uDpiHRz2Q"><img class="video__prev" src="../img/prev2.png" alt=""/>
-                <div class="economy__info"> <span>Посмотрите пример одного </span><br/><span>из занятий по истории</span></div>
+              <div class="video__wrapper js_youtube" id="w0nJPhjpjFU">
+                <div class="economy__info"> <span>Посмотрите пример одного </span><br/><span>из занятий по геометрии</span></div>
               </div>
             </div>
             <div class="economy__bage"> <span class="economy__bageText"><b>Если вы не успели </b>посмотреть вебинар, он будет доступен в записи</span></div><img class="decor decor_head" src="../img/Head.png" alt=""/>
@@ -127,31 +140,32 @@
       <!-- begin takeFree -->
       <section class="takeFree" id="takeFree">
         <div class="container_center">
-          <h2 class="section__title section__title_center">Получите по одному занятию <br>на каждый предмет бесплатно!</h2>
+          <h2 class="section__title section__title_center"><b>Получите по одному занятию</b> <br>на каждый предмет бесплатно!</h2>
           <div class="section__sub">Для этого просто нажмите на кнопку ниже и авторизуйся через <br>ВК. Занятия придут в личные сообщения.</div>
-          <div class="takeFree__action">
-            <button class="btn btn_success">Получите бесплатные занятия</button>
-          </div><img class="decor decor_circule" src="../img/circule.png" alt=""/>
+          <div class="takeFree__action"><a class="btn btn_success" href="https://vk.com/app5728966_-124303372#368208" target="blank">Получите бесплатные занятия</a></div><img class="decor decor_circule" src="../img/circule.png" alt=""/>
         </div>
       </section>
       <!-- end takeFree -->
       <!-- begin dz -->
       <section class="dz" id="dz">
-        <div class="labeled">
+        <div class="labeled__wrap">
+          <div class="labeled"></div>
           <div class="container_center">
             <div class="dz__left">
               <div class="dz__item active" id="dz1"><img src="../img/zadanie.png" alt=""/></div>
-              <div class="dz__item" id="dz2"><img src="../img/zadanie.png" alt=""/></div>
-              <div class="dz__item" id="dz3"><img src="../img/zadanie.png" alt=""/></div>
+              <div class="dz__item" id="dz2"><img src="../img/zadanie2.png" alt=""/></div>
+              <div class="dz__item" id="dz3"><img src="../img/zadanie3.png" alt=""/></div>
             </div>
             <div class="dz__right">
               <h2 class="section__title">Ни одно занятие <b>не проходит </b><br/><b>без домашних заданий, </b><br/>которые проверяют наши <br/>кураторы</h2>
               <p>За неделю ученики выполняют 3 домашних задания по каждому предмету. На каждое уходит 1,5 часа.</p>
               <p>Это не просто, но ребята начинают обгонять сверстников уже через 2 недели обучения.</p>
               <ul class="dz__togle">
+                <li class="dz__arrow dz__prev isMobile"><i class="icon-prev"></i></li>
                 <li class="dz__togleItem active"><a class="dz__togleLink active" href="#dz1" data-toggle="tab">Русский язык</a></li>
                 <li class="dz__togleItem"><a class="dz__togleLink" href="#dz2" data-toggle="tab">Обществознание</a></li>
                 <li class="dz__togleItem"><a class="dz__togleLink" href="#dz3" data-toggle="tab">Физика</a></li>
+                <li class="dz__arrow dz__next isMobile"><i class="icon-next"></i></li>
               </ul>
             </div>
           </div>
@@ -167,13 +181,648 @@
           </div>
           <div class="chats__right">
             <div class="chats__slider">
-              <div class="chats__sliderItem"><img src="../img/iPhone-slide.png" alt=""/></div>
-              <div class="chats__sliderItem"><img src="../img/iPhone-slide.png" alt=""/></div>
+              <div class="chats__sliderItem"><img src="../img/ch1.jpg" alt=""/></div>
+              <div class="chats__sliderItem"><img src="../img/ch2.jpg" alt=""/></div>
+              <div class="chats__sliderItem"><img src="../img/ch3.jpg" alt=""/></div>
+              <div class="chats__sliderItem"><img src="../img/ch4.jpg" alt=""/></div>
+              <div class="chats__sliderItem"><img src="../img/ch5.jpg" alt=""/></div>
+              <div class="chats__sliderItem"><img src="../img/ch6.jpg" alt=""/></div>
+              <div class="chats__sliderItem"><img src="../img/ch7.jpg" alt=""/></div>
             </div>
           </div>
         </div>
       </section>
       <!-- end chats -->
+      <!-- begin guide -->
+      <section class="guide">
+        <div class="container_center">
+          <div class="trapeze">
+            <div class="labeled__wrap">
+              <div class="labeled"></div>
+              <div class="guide__left"><img src="../img/guide.png" alt=""/></div>
+              <div class="guide__right">
+                <h2 class="section__title"> <b>Получите пособия </b><small>по правильной подготовке на каждый предмет от ведущих специалистов УМСКУЛ</small></h2>
+                <div class="guide__sell"><span class="guide__price">3 999 <span class="rub"> </span></span><span class="guide__free">бесплатно</span></div>
+                <div class="guide__action"><a class="btn btn_primary btn_vk" href="https://vk.com/app5728966_-124303372#368252" target="blank"><i class="icon-vk"> </i>Получить бесплатно</a>
+                  <div class="guide__info">Авторизуйтесь через ВК и мы сразу же вышлем <br>пособия по подготовке в личном сообщении</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end guide -->
+      <!-- begin teachers -->
+      <section class="teachers">
+        <div class="container_center">
+          <h2 class="section__title section__title_center">Каждый <b>преподаватель интересно <br>объясняет </b>свой предмет и постоянно <br/>работает с учениками</h2>
+          <div class="trapeze">
+            <div class="teachers__tumbs">
+              <div class="teachers__tumb">
+                <div class="teachers__tumbName">Артур Шарафиев</div>
+                <div class="teachers__tumbTheme">математика</div>
+              </div>
+              <div class="teachers__tumb">
+                <div class="teachers__tumbName">Аделия Адамова</div>
+                <div class="teachers__tumbTheme">математика</div>
+              </div>
+              <div class="teachers__tumb">
+                <div class="teachers__tumbName">Анастасия Малова</div>
+                <div class="teachers__tumbTheme">обществознание</div>
+              </div>
+              <div class="teachers__tumb">
+                <div class="teachers__tumbName">Аля Виноградова</div>
+                <div class="teachers__tumbTheme">история</div>
+              </div>
+              <div class="teachers__tumb">
+                <div class="teachers__tumbName">Александр Долгих</div>
+                <div class="teachers__tumbTheme">русский язык</div>
+              </div>
+              <div class="teachers__tumb">
+                <div class="teachers__tumbName">Жанна Казанская</div>
+                <div class="teachers__tumbTheme">биология</div>
+              </div>
+              <div class="teachers__tumb">
+                <div class="teachers__tumbName">Клим Корнеевец</div>
+                <div class="teachers__tumbTheme">химия</div>
+              </div>
+              <div class="teachers__tumb">
+                <div class="teachers__tumbName">Виктория Ланская</div>
+                <div class="teachers__tumbTheme">информатика</div>
+              </div>
+              <div class="teachers__tumb">
+                <div class="teachers__tumbName">Макс Тесла</div>
+                <div class="teachers__tumbTheme">физика</div>
+              </div>
+              <div class="teachers__tumb">
+                <div class="teachers__tumbName">Фариша Князева</div>
+                <div class="teachers__tumbTheme">литература</div>
+              </div>
+              <div class="teachers__tumb">
+                <div class="teachers__tumbName">Юлия Миронова</div>
+                <div class="teachers__tumbTheme">английский язык</div>
+              </div>
+              <div class="teachers__tumb">
+                <div class="teachers__tumbName">Камилла Малиновская</div>
+                <div class="teachers__tumbTheme">английский язык</div>
+              </div>
+              <div class="teachers__tumb">
+                <div class="teachers__tumbName">Виктория Ларионова</div>
+                <div class="teachers__tumbTheme">немецкий язык</div>
+              </div>
+              <div class="teachers__tumb">
+                <div class="teachers__tumbName">Надежда Ковалевская</div>
+                <div class="teachers__tumbTheme">базовая математика</div>
+              </div>
+              <div class="teachers__tumb">
+                <div class="teachers__tumbName">Алина Вернадская</div>
+                <div class="teachers__tumbTheme">география</div>
+              </div>
+            </div>
+            <div class="teachers__slider">
+              <div class="teachers__slide">
+                <div class="labeled labeled_primary labeled_right"></div>
+                <div class="teachers__left">
+                  <div class="teachers__photo isMobile"><img src="../img/teacher/1-2.png" alt=""/></div>
+                  <div class="teachers__name">Артур Шарафиев</div>
+                  <div class="teachers__bage">математика</div>
+                  <div class="teachers__text">Шестой год преподаёт математику, выпустил почти 3 000 учеников. Средний балл учеников в прошлом году — 79,6.<br/>Наставник призёров и победителей всероссийских олимпиад по математике.</div>
+                  <div class="teachers__quote">Практика — лучшее средство для выживания в современном мире. Чем больше задач вы решите при подготовке к ЕГЭ, тем выше ваш балл.</div>
+                </div>
+                <div class="teachers__right">
+                  <div class="teachers__img isDesktop"><img src="../img/teacher/1.png" alt=""/><img class="teachers__imgDec" src="../img/teacher/1-1.png" alt=""/></div>
+                  <div class="teachers__rate">
+                    <div class="teachers__rateNum">83,6</div>Средний балл наших учеников
+                  </div>
+                </div>
+              </div>
+              <div class="teachers__slide">
+                <div class="labeled labeled_violet labeled_right"></div>
+                <div class="teachers__left">
+                  <div class="teachers__photo isMobile"><img src="../img/teacher/14-2.png" alt=""/></div>
+                  <div class="teachers__name">Аделия Адамова</div>
+                  <div class="teachers__bage">математика</div>
+                  <div class="teachers__text">В 2013 году закончила школу с серебряной медалью и сдала математику на 96 баллов. 5-летний стаж преподавания + красный диплом КФУ по направлению: Преподаватель математики и информатики. На данный момент поступает в магистратуру в Москве.</div>
+                  <div class="teachers__quote">В этом мире нет нерешаемых проблем, а в ЕГЭ по математике - задач! Все, что нужно от тебя при подготовке - это терпение, спокойствие, трудолюбие и бешеное желание!)</div>
+                </div>
+                <div class="teachers__right">
+                  <div class="teachers__img isDesktop"><img src="../img/teacher/14.png" alt=""/><img class="teachers__imgDec" src="../img/teacher/1-1.png" alt=""/></div>
+                  <div class="teachers__rate">
+                    <div class="teachers__rateNum">78,4</div>Средний балл наших учеников
+                  </div>
+                </div>
+              </div>
+              <div class="teachers__slide">
+                <div class="labeled labeled_yellow labeled_right"></div>
+                <div class="teachers__left">
+                  <div class="teachers__photo isMobile"><img src="../img/teacher/2-2.png" alt=""/></div>
+                  <div class="teachers__name">Анастасия Малова</div>
+                  <div class="teachers__bage">обществознание</div>
+                  <div class="teachers__text">В 2016 году сама сдала ЕГЭ по обществознанию на 96 баллов. Уже третий год готовит учеников к экзамену по обществознанию. <br>В прошлом году средний балл учеников был 89,6.</div>
+                  <div class="teachers__quote">Я студентка Казанского Федерального Университета Института управления, экономики и финансов. И я просто фанат своего дела, обожаю обществознание и каждый раз стараюсь передать это ученикам.</div>
+                </div>
+                <div class="teachers__right">
+                  <div class="teachers__img isDesktop"><img src="../img/teacher/2.png" alt=""/><img class="teachers__imgDec" src="../img/teacher/2-1.png" alt=""/></div>
+                  <div class="teachers__rate">
+                    <div class="teachers__rateNum">89,6</div>Средний балл наших учеников
+                  </div>
+                </div>
+              </div>
+              <div class="teachers__slide">
+                <div class="labeled labeled_purple labeled_right"></div>
+                <div class="teachers__left">
+                  <div class="teachers__photo isMobile"><img src="../img/teacher/3-2.png" alt=""/></div>
+                  <div class="teachers__name">Аля Виноградова</div>
+                  <div class="teachers__bage">история</div>
+                  <div class="teachers__text">Готовит к ЕГЭ по истории 6 лет. За последний год 11 учеников набрали 100 баллов на ЕГЭ, больше 100 написали экзамен по истории набрали 90+ баллов.</div>
+                  <div class="teachers__quote">История сложна только для тех, кто не понимает ее. Учитесь не зубрить, а разбираться в историческом процессе, получать удовольствие от соприкосновения с событиями. Игры, фильмы, аудио, прибаутки дадут жизнь знаниям, а они на основе практики и грамотной методики подготовки выльются в 90+.</div>
+                </div>
+                <div class="teachers__right">
+                  <div class="teachers__img isDesktop"><img src="../img/teacher/3.png" alt=""/><img class="teachers__imgDec" src="../img/teacher/3-1.png" alt=""/></div>
+                  <div class="teachers__rate">
+                    <div class="teachers__rateNum">82,4</div>Средний балл наших учеников
+                  </div>
+                </div>
+              </div>
+              <div class="teachers__slide">
+                <div class="labeled labeled_orange labeled_right"></div>
+                <div class="teachers__left">
+                  <div class="teachers__photo isMobile"><img src="../img/teacher/4-2.png" alt=""/></div>
+                  <div class="teachers__name">Александр Долгих</div>
+                  <div class="teachers__bage">русский язык</div>
+                  <div class="teachers__text">Третий год готовит учеников к ЕГЭ по русскому языку. В 2018 выпустил 12 стобалльников, 27 учеников, сдавших ЕГЭ на 98 баллов и 30 - на 95 баллов.</div>
+                  <div class="teachers__quote">Грамотно быть модно! <br>И это важно понимать. Мода на подвороты пройдет, как и мода на знание всех рэперов. Мода на спиннеры уже прошла, как и мода на знание всех блогеров. А вот грамотность? Красота речи всегда будет с тобой, дружище!</div>
+                </div>
+                <div class="teachers__right">
+                  <div class="teachers__img isDesktop"><img src="../img/teacher/4.png" alt=""/><img class="teachers__imgDec" src="../img/teacher/4-1.png" alt=""/></div>
+                  <div class="teachers__rate">
+                    <div class="teachers__rateNum">94,2</div>Средний балл наших учеников
+                  </div>
+                </div>
+              </div>
+              <div class="teachers__slide">
+                <div class="labeled labeled_green labeled_right"></div>
+                <div class="teachers__left">
+                  <div class="teachers__photo isMobile"><img src="../img/teacher/5-2.png" alt=""/></div>
+                  <div class="teachers__name">Жанна Казанская</div>
+                  <div class="teachers__bage">биология</div>
+                  <div class="teachers__text">В 2012 году сдала ЕГЭ по биологии на 100 баллов, по химии на 100 баллов, по русскому на 90 баллов. Пятый год преподает биологию выпускникам. В 2018 закончила КГМУ с отличием.</div>
+                  <div class="teachers__quote">Нам предстоит интенсивный и интересный год. Я научу вас по-другому относиться к ЕГЭ, щёлкать задачки и творчески подходить к заданиям второй части. ЕГЭ на 100 - просто!</div>
+                </div>
+                <div class="teachers__right">
+                  <div class="teachers__img isDesktop"><img src="../img/teacher/5.png" alt=""/><img class="teachers__imgDec" src="../img/teacher/5-1.png" alt=""/></div>
+                  <div class="teachers__rate">
+                    <div class="teachers__rateNum">96,0</div>Средний балл наших учеников
+                  </div>
+                </div>
+              </div>
+              <div class="teachers__slide">
+                <div class="labeled labeled_primary labeled_right"></div>
+                <div class="teachers__left">
+                  <div class="teachers__photo isMobile"><img src="../img/teacher/6-2.png" alt=""/></div>
+                  <div class="teachers__name">Клим Корнеевец</div>
+                  <div class="teachers__bage">химия</div>
+                  <div class="teachers__text">Призёр, лауреат и победитель всероссийских олимпиад по химии и биологии. Является членом общества «Научно-интеллектуальный потенциал России». <br>На ЕГЭ 2018 года 3 его ученика набрали 100 баллов, 7 — 98 баллов, и 41 ученик — на 80+ баллов.</div>
+                  <div class="teachers__quote">Никогда не делайте то, что не любите — пара слов о том, к чему может привести безответное отношение к наукам.</div>
+                </div>
+                <div class="teachers__right">
+                  <div class="teachers__img isDesktop"><img src="../img/teacher/6.png" alt=""/><img class="teachers__imgDec" src="../img/teacher/6-1.png" alt=""/></div>
+                  <div class="teachers__rate">
+                    <div class="teachers__rateNum">85,0</div>Средний балл наших учеников
+                  </div>
+                </div>
+              </div>
+              <div class="teachers__slide">
+                <div class="labeled labeled_lgreen labeled_right"></div>
+                <div class="teachers__left">
+                  <div class="teachers__photo isMobile"><img src="../img/teacher/7-2.png" alt=""/></div>
+                  <div class="teachers__name">Виктория Ланская</div>
+                  <div class="teachers__bage">информатика</div>
+                  <div class="teachers__text">В 2018 году окончила школу с золотой медалью, сдала ЕГЭ по информатике на 100 баллов. Поступила в Казанский Федеральный Университет Высшей школы информационных технологий и информационных систем. </div>
+                  <div class="teachers__quote">Искренне люблю свой предмет и считаю, что его должен полюбить каждый, кто собирается сдавать экзамен. Ведь будущее за людьми, умеющими логически мыслить. Учу понимать и думать, а не зубрить решения!</div>
+                </div>
+                <div class="teachers__right">
+                  <div class="teachers__img isDesktop"><img src="../img/teacher/7.png" alt=""/><img class="teachers__imgDec" src="../img/teacher/7-1.png" alt=""/></div>
+                  <div class="teachers__rate">
+                    <div class="teachers__rateNum">84,8</div>Средний балл наших учеников
+                  </div>
+                </div>
+              </div>
+              <div class="teachers__slide">
+                <div class="labeled labeled_lprimary labeled_right"></div>
+                <div class="teachers__left">
+                  <div class="teachers__photo isMobile"><img src="../img/teacher/8-2.png" alt=""/></div>
+                  <div class="teachers__name">Макс Тесла</div>
+                  <div class="teachers__bage">физика</div>
+                  <div class="teachers__text">Студент МГУ им. Ломоносова механико-математический факультета. В 2017 году сдал ЕГЭ по физике на 96 баллов, математику - 98, русский - 100. <br/>Второй год готовит ребят к ЕГЭ по физике. В 2018 году выпустил 69 учеников, набравших 85+ баллов, среди которых 3 стобалльника.</div>
+                  <div class="teachers__quote">Моя цель — помочь вам определить направление подготовки и познакомить с физикой, одной из самых поразительных наук на свете.</div>
+                </div>
+                <div class="teachers__right">
+                  <div class="teachers__img isDesktop"><img src="../img/teacher/8.png" alt=""/><img class="teachers__imgDec" src="../img/teacher/8-1.png" alt=""/></div>
+                  <div class="teachers__rate">
+                    <div class="teachers__rateNum">82,0</div>Средний балл наших учеников
+                  </div>
+                </div>
+              </div>
+              <div class="teachers__slide">
+                <div class="labeled labeled_gray labeled_right"></div>
+                <div class="teachers__left">
+                  <div class="teachers__photo isMobile"><img src="../img/teacher/9-2.png" alt=""/></div>
+                  <div class="teachers__name">Фариша Князева</div>
+                  <div class="teachers__bage">литература</div>
+                  <div class="teachers__text">Студентка факультета журналистики МГУ. Сдала ЕГЭ по литературе на 100 баллов. В 2018 году выпустила 25-стобалльников, 123 ученика набрали 90+, 252 выпускника 80+ благодаря уникальной методике подготовки к ЕГЭ. Написала авторский цитатник, который помог набрать абитуриентам высокие баллы на экзамене по литературе.</div>
+                  <div class="teachers__quote">В этом учебном году у нас получится разобрать все произведения подробно и обстоятельно. Мы рассмотрим все темы сочинений, всю теорию литературы, и ЕГЭ не будет помехой при поступлении в вуз мечты.</div>
+                </div>
+                <div class="teachers__right">
+                  <div class="teachers__img isDesktop"><img src="../img/teacher/9.png" alt=""/><img class="teachers__imgDec" src="../img/teacher/9-1.png" alt=""/></div>
+                  <div class="teachers__rate">
+                    <div class="teachers__rateNum">90,0</div>Средний балл наших учеников
+                  </div>
+                </div>
+              </div>
+              <div class="teachers__slide">
+                <div class="labeled labeled_lprimary labeled_right"></div>
+                <div class="teachers__left">
+                  <div class="teachers__photo isMobile"><img src="../img/teacher/10-2.png" alt=""/></div>
+                  <div class="teachers__name">Юлия Миронова</div>
+                  <div class="teachers__bage">английский язык</div>
+                  <div class="teachers__text">В 2016 году сдала ЕГЭ по англйискому языку на 96 баллов. Третий год преподает английский язык в онлайн-школе УмСкул. За время подготовки с ней, ученики с низким уровнем сдавали ЕГЭ на 80+. Доказала, что английский это не так сложно и привила любовь к языку.</div>
+                  <div class="teachers__quote">В этом году я научу вас писать писать эссе на максимальный балл. Расширю по максимуму ваш словарный запас и выведу на новый уровень знания английского. Язык - это свобода. Делайте то, что доставляет удовольствие, значит будете свободными.</div>
+                </div>
+                <div class="teachers__right">
+                  <div class="teachers__img isDesktop"><img src="../img/teacher/10.png" alt=""/><img class="teachers__imgDec" src="../img/teacher/10-1.png" alt=""/></div>
+                  <div class="teachers__rate">
+                    <div class="teachers__rateNum">88,6</div>Средний балл наших учеников
+                  </div>
+                </div>
+              </div>
+              <div class="teachers__slide">
+                <div class="labeled labeled_violet labeled_right"></div>
+                <div class="teachers__left">
+                  <div class="teachers__photo isMobile"><img src="../img/teacher/15-2.png" alt=""/></div>
+                  <div class="teachers__name">Камилла Малиновская</div>
+                  <div class="teachers__bage">английский язык</div>
+                  <div class="teachers__text">В 2016 году сдала ЕГЭ по английскому языку на 98 баллов. Поступила в Казанский Федеральный Университет, Институт международных отношений, истории и востоковедения.</div>
+                  <div class="teachers__quote">Чтобы дойти до цели,нужно идти. Я постараюсь сделать этот путь максимально интересным и продуктивным. Изучение языков-моя страсть, и я буду рада предать свой опыт и любовь к английскому языку ученикам.</div>
+                </div>
+                <div class="teachers__right">
+                  <div class="teachers__img isDesktop"><img src="../img/teacher/15.png" alt=""/><img class="teachers__imgDec" src="../img/teacher/10-1.png" alt=""/></div>
+                  <div class="teachers__rate">
+                    <div class="teachers__rateNum">86,8</div>Средний балл наших учеников
+                  </div>
+                </div>
+              </div>
+              <div class="teachers__slide">
+                <div class="labeled labeled_red labeled_right"></div>
+                <div class="teachers__left">
+                  <div class="teachers__photo isMobile"><img src="../img/teacher/11-2.png" alt=""/></div>
+                  <div class="teachers__name">Виктория Ларионова</div>
+                  <div class="teachers__bage">немецкий язык</div>
+                  <div class="teachers__text">В 2018 году сдала ЕГЭ по немецкому языку на 95 баллов. Преподает немецкий язык в онлайн-школе Умскул.</div>
+                  <div class="teachers__quote">В этом году я научу вас выполнять все задания ЕГЭ по немецкому на максимальные баллы. Готовясь вместе со мной, ребята без труда разбираются в самых сложных темах, пишут эссе на 14 баллов и устную часть на 18-20 баллов!</div>
+                </div>
+                <div class="teachers__right">
+                  <div class="teachers__img isDesktop"><img src="../img/teacher/11.png" alt=""/><img class="teachers__imgDec" src="../img/teacher/11-1.png" alt=""/></div>
+                  <div class="teachers__rate">
+                    <div class="teachers__rateNum">92,0</div>Средний балл наших учеников
+                  </div>
+                </div>
+              </div>
+              <div class="teachers__slide">
+                <div class="labeled labeled_violet labeled_right"></div>
+                <div class="teachers__left">
+                  <div class="teachers__photo isMobile"><img src="../img/teacher/12-2.png" alt=""/></div>
+                  <div class="teachers__name">Надежда Ковалевская</div>
+                  <div class="teachers__bage">базовая математика</div>
+                  <div class="teachers__text">Закончила лучший физ-мат лицей в Казани. В 2017 году защитила ВУЗовский диплом по специальности «Информационная безопасность». <br/>На данный момент получает второе высшее (педагогическое) <br/>Готовит ребят к ЕГЭ по профильной и базовой математике уже 6-й год, неоднократно сдавала ЕГЭ по профилю (балл - 98).</div>
+                  <div class="teachers__quote">Я занимаюсь тем, что мне действительно нравится и приносит удовольствие. Многим математика кажется чересчур сложной, и я очень хочу научить вас её ПОНИМАТЬ.</div>
+                </div>
+                <div class="teachers__right">
+                  <div class="teachers__img isDesktop"><img src="../img/teacher/12.png" alt=""/><img class="teachers__imgDec" src="../img/teacher/12-1.png" alt=""/></div>
+                  <div class="teachers__rate">
+                    <div class="teachers__rateNum">5,0</div>Средний балл наших учеников
+                  </div>
+                </div>
+              </div>
+              <div class="teachers__slide">
+                <div class="labeled labeled_warning labeled_right"></div>
+                <div class="teachers__left">
+                  <div class="teachers__photo isMobile"><img src="../img/teacher/13-2.png" alt=""/></div>
+                  <div class="teachers__name">Алина Вернадская</div>
+                  <div class="teachers__bage">география</div>
+                  <div class="teachers__text">Сдала ЕГЭ по географии на 92 балла. <br/>Огромная любовь к природе зародилась ещё в раннем детстве. В полтора года пошла в свой первый поход. Сейчас в ее копилке тысячи пеших километров и десятки преодоленных вершин.</div>
+                  <div class="teachers__quote">География у меня в крови: мои родители – географы. Мой душевно-географический порыв без зазубривания приведёт тебя к максимальному баллу и ВУЗу мечты!</div>
+                </div>
+                <div class="teachers__right">
+                  <div class="teachers__img isDesktop"><img src="../img/teacher/13.png" alt=""/><img class="teachers__imgDec" src="../img/teacher/13-1.png" alt=""/></div>
+                  <div class="teachers__rate">
+                    <div class="teachers__rateNum">85,7</div>Средний балл наших учеников
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="teachers__sub"> <b>Приходите </b>на любое из наших занятий <b>бесплатно</b></div>
+          <div class="teachers__action"><a class="btn btn_success btn_icon" href="https://vk.com/app5728966_-124303372#368214" target="blank"> <i class="icon-pencil"> </i>Записаться на бесплатное занятие</a></div>
+        </div>
+      </section>
+      <!-- end teachers -->
+      <!-- begin knowlege -->
+      <section class="knowlege">
+        <div class="container_center">
+          <h2 class="section__title section__title_center"> <b>Мы делимся знаниями, </b>которые сами <br>по себе позволяют подготовиться на хорошие <br>баллы и компенсируют репетиторов
+            <!-- begin knowlege__grid-->
+          </h2>
+          <div class="grid grid__2 knowlege__grid">
+            <div>
+              <div id="vk_groups"></div>
+            </div>
+            <div>
+              <div class="youtube__viget">
+                <div class="youtube__vigetWrap">
+                  <div class="youtube__vigetLogo"><img src="../img/yuotube-channel.jpg" alt=""/></div>
+                  <div class="youtube__vigetAction"><a class="youtube__vigetName" href="https://www.youtube.com/channel/UCggA5GaSPVyjsqomtwR5ufw?view_as=subscriber" target="blank">Умскул — онлайн-школа подготовки к ЕГЭ и ОГЭ</a>
+                    <div>
+                      <div class="g-ytsubscribe" data-channelid="UCggA5GaSPVyjsqomtwR5ufw" data-layout="default" data-count="default"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end knowlege__grid--><img class="decor decor_magnit" src="../img/Magnet.png" alt=""/><img class="decor decor_line" src="../img/Line.png" alt=""/>
+        </div>
+      </section>
+      <!-- end knowlege -->
+      <!-- begin vabinars -->
+      <section class="vabinars">
+        <h2 class="section__title section__title_center"> <b>Проводим бесплатные вебинары <br></b>по всем предметам каждую неделю</h2>
+        <!-- begin vabinars__grid-->
+        <div class="grid grid__3 vabinars__grid">
+          <div>
+            <div class="vabinars__video">
+              <div class="video__wrapper js_youtube" id="oOMBEPICJ9I"></div>
+            </div>
+          </div>
+          <div>
+            <div class="vabinars__video">
+              <div class="video__wrapper js_youtube" id="YysAoCybh9I"></div>
+            </div>
+          </div>
+          <div>
+            <div class="vabinars__video">
+              <div class="video__wrapper js_youtube" id="1a2kdbjUSRI"></div>
+            </div>
+          </div>
+        </div>
+        <!-- end vabinars__grid-->
+        <div class="container_center">
+          <div class="vabinars__subscribe">
+            <div class="label"></div>
+            <div class="vabinars__label"><b>Подпишитесь на уведомления </b><br/>о наших бесплатных вебинарах</div>
+            <div class="vabinars__action"><a class="btn btn_primary btn_vk" href="https://vk.com/app5728966_-124303372#368214" target="blank"><i class="icon-vk"> </i>Подписаться</a>
+              <div class="vabinars__info">Подпишитесь и мы будем оповещать вас <br/>в личных сообщениях обо всех вебинарах</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end vabinars -->
+      <!-- begin control -->
+      <section class="control">
+        <div class="container_center">
+          <h2 class="section__title section__title_center">Проводим <b>еженедельный контроль</b><br/><b>качества преподавания </b>и собираем <br/>отзывы учеников и родителей</h2>
+          <div class="control__swich">
+            <div class="control__swichItem active" data-slider="#revGraduates">Отзывы учеников</div>
+            <div class="control__swichItem" data-slider="#revParent">Отзывы родителей</div>
+          </div>
+          <div class="control__wrap active" id="revGraduates">
+            <div class="control__slider" id="slideGraduates">
+              <div class="control__sliderItem"><img src="../img/review/1.jpg" alt=""/></div>
+              <div class="control__sliderItem"><img src="../img/review/2.jpg" alt=""/></div>
+              <div class="control__sliderItem"><img src="../img/review/3.jpg" alt=""/></div>
+              <div class="control__sliderItem"><img src="../img/review/4.jpg" alt=""/></div>
+              <div class="control__sliderItem"><img src="../img/review/5.jpg" alt=""/></div>
+              <div class="control__sliderItem"><img src="../img/review/6.jpg" alt=""/></div>
+            </div>
+          </div>
+          <div class="control__wrap control__wrap_parent" id="revParent">
+            <div class="control__rev">
+              <div class="control__revSlide" id="slideParent">
+                <div>
+                  <div class="control__revTop">
+                    <div class="control__revLeft">
+                      <div class="control__revPhoto"><img src="../img/review/p1-sm.jpg" alt=""/></div>
+                    </div>
+                    <div class="control__revRight">
+                      <div class="control__revText">
+                        <p>Спасибо огромное онлайн школе УМСКУЛ за подготовку моей дочери к ЕГЭ.</p>
+                        <p>Сколько было куплено сборников, репетиторов и доп.занятий. В итоге, приложив усилия и постарались, все прошли. </p>
+                        <p>Результаты: 89 русский, 80 обществознание и 100 литература. Спасибо всем ребятам из УМСКУЛ. 😁</p>
+                        <div class="control__revName">Татьяна Кононенко (Мама) г. Москва</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="control__revBottom">
+                    <div class="video__wrapper js_youtube" id="N3Yy5PFYtrs"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="control__revTop">
+                    <div class="control__revLeft">
+                      <div class="control__revPhoto"><img src="../img/review/p2-sm.jpg" alt=""/></div>
+                    </div>
+                    <div class="control__revRight">
+                      <div class="control__revText">
+                        <p>ЕГЭ - в наше время звучит как приговор. Какие предметы выбрать, как готовиться, как найти репетиторов, которые смогут хорошо подготовить ребенка к этому ответственному мероприятию, от которого зависит дальнейшая судьба.</p>
+                        <p>Вот и перед нами встал этот вопрос. Заниматься с репетитором на дому- весьма дорогое удовольствие, школа не даёт необходимых знаний для результата 90-100 баллов. Интернет предложений много, как не ошибиться и выбрать оптимальный вариант по качеству и доступности. Конечно были опасения, (нарваться на мошенников), ведь интернет услуги - это плодотворная почва для обмана. И вот Умскул, эту организацию выбрали по отзывам, так же привлекла доступная стоимость занятий.</p>
+                        <p>Дочь решила сдавать обществознание, нужно отметить, в нее не верили школьные учителя, да и репетитор откровенно считал ее слабенькой. Но 93 балла, стали достойной наградой. Умскул помогает школьнику подготовить себя к самым сложным вопросам. Конечно без колоссального труда ничего не получится, но преподаватели этой организации доступно и легко вкладывают в головы учеников необходимые знания. Кто хочет получить высокие баллы на ЕГЭ, смело обращайтесь в Умскул.</p>
+                        <p>Это качественно и это доступно.</p>
+                        <div class="control__revName">Екатерина Мягкова (Мама) г. Санкт-Петербург</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="control__revBottom">
+                    <div class="video__wrapper js_youtube" id="D1jqPgbT5mI"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="control__revTop">
+                    <div class="control__revLeft">
+                      <div class="control__revPhoto"><img src="../img/review/p3-sm.jpg" alt=""/></div>
+                    </div>
+                    <div class="control__revRight">
+                      <div class="control__revText">
+                        <p>Год назад Яша подошел к нам и сказал: «Родители, вы знаете, что я хочу поступать на мед и поэтому буду сдавать химию.</p>
+                        <p>Мне сказали, что есть онлайн занятия в умскул именно по этому предмету, его ведёт студент, который сам учится в меде.»</p>
+                        <p>Конечно, первое время мы переживали за полноту подачи материала, ведь студенты не имеют образования учителя. Но потом мы все вместе посмотрели бесплатный вебинар Клима и, недолго думая, мы согласились и взяли мг.</p>
+                        <p>Ну а теперь итоги годового обучения в умскул:</p>
+                        <p>1. Яша сдал ЕГЭ по химии на 95 баллов, поступил на бюджет стомата в ЯГМУ, где конкурс на одно место был 600 чел, и было всего 5 бюджетных.</p>
+                        <p>2. Вечерами, когда многие молодые люди бездумно слоняются по улицам, Яша занимался, причем занятия в умскул реально нравились сыну, и обучался он без всякого принуждения, наоборот, всегда переживал, если приходилось пропускать занятия.</p>
+                        <p>В общем большое спасибо умскул за все, что дали моему сыну!!!</p>
+                        <p>И каждому родителю, чей ребенок будет сдавать химию, я рекомендую занятия с Климом!</p>
+                        <div class="control__revName">Лушков Роман (Папа) г. Сыктывкар</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="control__revBottom">
+                    <div class="video__wrapper js_youtube" id="D1jqPgbT5mI"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="control__revTop">
+                    <div class="control__revLeft">
+                      <div class="control__revPhoto"><img src="../img/review/p4-sm.jpg" alt=""/></div>
+                    </div>
+                    <div class="control__revRight">
+                      <div class="control__revText">
+                        <p>моя дочь Александра занималась химией в умскул с ноября 17 года. Сдала химию на 74 балла</p>
+                        <p>дочка сама нашла вашу школу, сначала мы не верили в действенность онлайн уроков, но позже жалели, что не нашли вас раньше.</p>
+                        <p>я убеждена, что онлайн школа «умскул» – одно из лучших мест для подготовки, потому что идёт постоянное изучение предмета. более того, дети учатся организовывать себя самостоятельно.</p>
+                        <p>огромное спасибо преподавателю за его умение преподнести курс так интересно и популярно.</p>
+                        <p>«куда бы не привел вас жизненный путь, главное – оставаться человеком,» - эти слова Клима до сих пор вспоминает наша семья.</p>
+                        <p>я рада, что моя дочь занималась у вас.</p>
+                        <p>мы уже даже успели посоветовать умскул нескольким знакомым.</p>
+                        <div class="control__revName">Юлия Кузнецова (Мама) г. Санкт-Петербург</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="control__revBottom">
+                    <div class="video__wrapper js_youtube" id="D1jqPgbT5mI"></div>
+                  </div>
+                </div>
+                <div>
+                  <div class="control__revTop">
+                    <div class="control__revLeft">
+                      <div class="control__revPhoto"><img src="../img/review/p5-sm.jpg" alt=""/></div>
+                    </div>
+                    <div class="control__revRight">
+                      <div class="control__revText">
+                        <p>Я хочу поблагодарить Умскул за отличную работу.</p>
+                        <p>Моя дочь, Коршунова Мария, в этом году сдавала ЕГЭ и готовилась к экзаменам с Юлей и Фаришей.</p>
+                        <p>Маша смотрела бесплатные вебинары и брала несколько платных курсов. В итоге она набрала 100 баллов по русскому языку и литературе и 95 – по английскому.</p>
+                        <p>Благодаря Умскул и трудолюбию можно достичь лучших результатов и поступить в вуз мечты.</p>
+                        <div class="control__revName">Коршунова Ольга (Мама) г. Дмитров</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="control__revBottom">
+                    <div class="video__wrapper js_youtube" id="D1jqPgbT5mI"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><img class="decor decor_penL" src="../img/Pen2.png" alt=""/><img class="decor decor_pencil" src="../img/Pencil.png" alt=""/>
+        </div>
+      </section>
+      <!-- end control -->
+      <!-- begin programm -->
+      <section class="programm" id="programm">
+        <h2 class="section__title section__title_center"><b>Наши программы </b><br/>подготовки к ЕГЭ</h2>
+        <div class="container_center">
+          <div class="programm__item">
+            <div class="labeled"></div>
+            <div class="programm__top">
+              <div class="programm__left">
+                <div class="programm__title">Спецкурс
+                  <div class="programm__price">350 <span class="rub"></span></div>
+                </div>
+                <div class="programm__sub">3 онлайн-занятия. Изучение одного раздела</div>
+                <div class="programm__text">
+                  <p>Курс, состоящий из <b>3 онлайн-занятий</b>, с домашним заданием и его проверкой. На курсе изучаем один из разделов по предмету и учимся решать задания, которые попадаются на ЕГЭ. </p>
+                  <p>На выходе – полное понимание темы и умение решать любые задачи по ней.</p>
+                </div>
+              </div>
+              <div class="programm__right"><img class="programm__book" src="../img/Box1.png" alt=""/>
+                <div class="programm__label">каждый месяц</div>
+              </div>
+            </div>
+            <div class="programm__bottom">
+              <div class="programm__bottomLeft"><a class="btn btn_success" href="https://pay.umschool.net" target="blank">Оплатить</a></div>
+              <div class="programm__bottomRight"><a class="btn btn_show" href="https://vk.com/app5728966_-124303372#368208" target="blank">Посмотреть одно занятие бесплатно</a></div>
+              <div class="programm__bottomCenter">или</div>
+            </div>
+          </div>
+          <div class="programm__item">
+            <div class="labeled"></div>
+            <div class="programm__top">
+              <div class="programm__left">
+                <div class="programm__title">Мастер-группа
+                  <div class="programm__price">2 650 <span class="rub"></span></div>
+                </div>
+                <div class="programm__sub">Полный курс подготовки. 12-16 занятий в месяц</div>
+                <div class="programm__text">
+                  <p><b>Онлайн-занятия</b> в группе до 30 человек. Домашняя работа + её проверка. Связь с преподавателем 24/7. У каждого ученика свой наставник, который следит за ходом обучения и помогает по любым вопросам. </p>
+                  <p>На выходе: знание всего материала и умение решать типовые задачи ЕГЭ. </p>
+                </div>
+              </div>
+              <div class="programm__right"><img class="programm__book" src="../img/Box2.png" alt=""/>
+                <div class="programm__label">каждый месяц</div>
+              </div>
+            </div>
+            <div class="programm__bottom">
+              <div class="programm__bottomLeft"><a class="btn btn_success" href="https://pay.umschool.net" target="blank">Оплатить</a></div>
+              <div class="programm__bottomRight"><a class="btn btn_show" href="https://vk.com/app5728966_-124303372#368208" target="blank">Посмотреть одно занятие бесплатно</a></div>
+              <div class="programm__bottomCenter">или</div>
+            </div>
+          </div>
+          <div class="programm__item">
+            <div class="labeled"></div>
+            <div class="programm__top">
+              <div class="programm__left">
+                <div class="programm__title">Мастер-группа <small>(2 предмета)</small>
+                  <div class="programm__price"> 
+                    <div class="programm__priceLabel">цена со скидкой</div>4 500 <span class="rub"></span>
+                    <div class="old">5 300 <span class="rub"></span></div>
+                  </div>
+                </div>
+                <div class="programm__sub">Полный курс подготовки. 12-16 занятий в месяц</div>
+                <div class="programm__text">
+                  <p><b>Онлайн-занятия</b> в группе до 30 человек. Домашняя работа + её проверка. Связь с преподавателем 24/7. У каждого ученика свой наставник, который следит за ходом обучения и помогает по любым вопросам. </p>
+                  <p>На выходе: знание всего материала и умение решать типовые задачи ЕГЭ. </p>
+                </div>
+              </div>
+              <div class="programm__right"><img class="programm__book" src="../img/Box3.png" alt=""/>
+                <div class="programm__label">каждый месяц</div>
+              </div>
+            </div>
+            <div class="programm__bottom">
+              <div class="programm__bottomLeft"><a class="btn btn_success" href="https://pay.umschool.net" target="blank">Оплатить</a></div>
+              <div class="programm__bottomRight"><a class="btn btn_show" href="https://vk.com/app5728966_-124303372#368208" target="blank">Посмотреть одно занятие бесплатно</a></div>
+              <div class="programm__bottomCenter">или</div>
+            </div>
+          </div><img class="decor decor_coins" src="../img/Coins.png" alt=""/>
+        </div>
+      </section>
+      <!-- end programm -->
+      <!-- begin freeTarif -->
+      <section class="freeTarif">
+        <div class="container_center">
+          <h2 class="section__title section__title_center"><b>Пока не готовы платить деньги?</b></h2>
+          <div class="freeTarif__subscribe">
+            <div class="label"></div>
+            <div class="freeTarif__title">Бесплатный тариф</div>
+            <div class="freeTarif__label">Открытые и доступные для всех онлайн вебинары, которые проводятся раз в неделю по каждому предмету</div>
+            <div class="freeTarif__action"><a class="btn btn_primary btn_vk" href="https://vk.com/app5728966_-124303372#368208" target="blank"><i class="icon-vk"> </i>Получить бесплатно</a></div>
+            <div class="freeTarif__info">Подпишитесь и мы будем оповещать вас <br/>в личных сообщениях обо всех вебинарах</div>
+          </div>
+        </div>
+      </section>
+      <!-- end freeTarif-->
+      <!-- begin subscribe -->
+      <section class="subscribe">
+        <div class="container_center">
+          <div class="subscribe__img"><img src="../img/openmagazin.png" alt=""/></div><img class="decor decor_compass" src="../img/Compass.png" alt=""/><img class="decor decor_microscop" src="../img/Microscope.png" alt=""/>
+          <h2 class="section__title section__title_center"><b>Подпишитесь на УМСКУЛ-журнал</b></h2>
+          <div class="section__sub">и можете отказаться от репетитора — <br>он вам больше не нужен</div><a class="btn btn_primary btn_vk" href="https://vk.com/app5728966_-124303372#306062" target="blank"><i class="icon-vk"> </i>Подписаться на УМСКУЛ-журнал</a>
+          <div class="subscribe__info">
+            <div class="label"></div>
+            <div class="subscribe__title">Что это такое?</div>
+            <p>Это полезные статьи для выпускников по подготовке к ЕГЭ. В них мы расскажем о том, как правильно выстроить свое время при подготовке к экзаменам, как пронести шпаргалки. Если кто-то из наших учеников и знакомых незадолго до экзаменов получит варианты реальных КИМов — мы их тоже обязательно выложим.</p>
+            <p>Это и многое другое для вас бесплатно.</p>
+          </div>
+        </div>
+      </section>
+      <!-- end subscribe  -->
     </main>
     <!-- end main__content -->
   </div>
@@ -181,7 +830,7 @@
   <footer class="footer">
     <div class="container_center">
       <div class="footer__left">
-        <div class="footer__inn">ИНН 12412412412   ОГРН 2144124124122</div><a class="footer__privacy" href="#" data-toggle="modal" data-target="#privacyModal">Политика конфендиальности</a>
+        <div class="footer__inn">ИНН: 213009525024   ОГРНИП: 317213000015818</div><a class="footer__privacy" href="#" data-toggle="modal" data-target="#privacyModal">Политика конфендиальности</a>
       </div>
       <div class="footer__right"><a class="footer__time" href="http://timetofirst.ru" target="blank"><span class="footer__timeLabel">Разработка сайта  —</span><span class="footer__timeImg"><img src="../img/time-logo.png"/><img src="../img/time-logo-hover.png"/></span></a></div>
     </div>
@@ -206,5 +855,8 @@
   <script type="text/javascript" src="../js/modal.js"></script>
   <script type="text/javascript" src="../js/tab.js"></script>
   <script type="text/javascript" src="../js/slick.min.js"></script>
-  <script type="text/javascript" src="../js/function.js"></script>
+  <script type="text/javascript" src="../js/function.js?0.2"></script>
+  <script type="text/javascript" src="//cdn.callbackhunter.com/cbh.js?hunter_code=4d92db8beb10a24f0a6e06c7a76208a8" charset="UTF-8"></script>
+  <script type="text/javascript" src="https://vk.com/js/api/openapi.js?159"></script>
+  <script src="https://apis.google.com/js/platform.js"></script>
 </body>
